@@ -48,13 +48,13 @@
           <fieldset class="form__contacts fieldset">
             <legend class="fieldset__caption">Контактные данные (владельца кота)</legend>
             <label class="fieldset__label" for="email">Email:<sup>*</sup></label>
-            <input class="fieldset__input fieldset__input--email" type="email" id="email" name="email"                                  placeholder="kuklachev@gmail.com">
+            <input class="fieldset__input fieldset__input--email" type="email" id="email" name="email" placeholder="kuklachev@gmail.com">
             <label class="fieldset__label" for="phone">Телефон:<sup>*</sup></label>
-            <input class="fieldset__input fieldset__input--phone" type="tel" id="phone" name="phone"                                    placeholder="8 (960) 900-60-90">
+            <input class="fieldset__input fieldset__input--phone" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90">
           </fieldset>
           <div class="form__comment fieldset">
             <h3 class="fieldset__caption">Комментарий</h3>
-            <textarea class="fieldset__input fieldset__input--textarea" id="comment" name="comment"                                     placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="fieldset__input fieldset__input--textarea" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
           <fieldset class="form__additional fieldset">
             <legend class="fieldset__caption">Дополнительно</legend>
@@ -81,27 +81,27 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__logo">
-        <a href="index.html"><img class="page-footer__logo-image" src="http://placehold.it/150x100"></a>
+        <a class="page-footer__logo-link" href="index.html">
+          <img class="page-footer__logo-image" src="http://placehold.it/150x100">
+        </a>
       </div>
-      <section class="page-footer__social">
-        <ul>
-          <li>
-            <a class="page-footer__social-link page-footer__social-link--vk" href="#">VK</a>
-          </li>
-          <li>
-            <a class="page-footer__social-link page-footer__social-link--instagram" href="#">Instagram</a>
-          </li>
-          <li>
-            <a class="page-footer__social-link page-footer__social-link--facebook" href="#">Facebook</a>
-          </li>
-        </ul>
-      </section>
-      <section class="page-footer__academy">
+      <ul class="page-footer__social">
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link page-footer__social-link--vk" href="#">VK</a>
+        </li>
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link page-footer__social-link--instagram" href="#">Instagram</a>
+        </li>
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link page-footer__social-link--facebook" href="#">Facebook</a>
+        </li>
+      </ul>
+      <div class="page-footer__academy">
         <a class="page-footer__academy-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         <a href="https://htmlacademy.ru/intensive/adaptive">
           <img class="page-footer__academy-logo" src="http://placehold.it/150x100" alt="HTML Academy">
         </a>
-      </section>
+      </div>
     </footer>
   </body>
 </html>
