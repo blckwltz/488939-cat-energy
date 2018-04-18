@@ -1,0 +1,55 @@
+.catalog {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog__caption {
+  margin: 0;
+  padding-top: 25px;
+  padding-left: 21px;
+  padding-bottom: 35px;
+  font-size: 36px;
+  line-height: 60px;
+  border-top: 2px solid #e6e6e6;
+  border-bottom: 2px solid #e6e6e6;
+}
+
+.catalog__list {
+  padding: 0;
+}
+
+.catalog__more {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 25px;
+  border-bottom: 2px solid #ededed;
+}
+
+.catalog__toggle {
+  position: relative;
+  padding-top: 75px;
+  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  border: none;
+
+  &::before {
+    content: url("../img/icon-plus-mobile.svg");
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 125px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.catalog__description {
+  align-self: center;
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+}

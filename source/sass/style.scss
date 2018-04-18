@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Oswald Regular";
+  src: url("../fonts/oswaldregular.woff2") format("woff2"),
+    url("../fonts/oswaldregular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Oswald Medium";
+  src: url("../fonts/oswaldmedium.woff2") format("woff2"),
+    url("../fonts/oswaldmedium.woff") format("woff");
+}
+
+@import "button";
+@import "site-list";
+@import "form";
+@import "fieldset";
+@import "page-header";
+@import "main-nav";
+@import "page-main";
+@import "product";
+@import "programs";
+@import "advantages";
+@import "example";
+@import "features";
+@import "slider";
+@import "contacts";
+@import "page-footer";
+@import "catalog";
+@import "product-card";
+@import "extras";
+@import "offer";
+@import "program-choice";
+
+html {
+  background-color: silver;
+}
+
+body {
+  width: 320px;
+  margin: auto;
+  font-family: "Oswald Regular", "Arial", sans-serif;
+  background-color: #ffffff;
+}

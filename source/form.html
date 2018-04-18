@@ -3,25 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="http://placehold.it/150x100" alt="CAT ENERGY">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="192" height="38" alt="CAT ENERGY">
       </a>
       <nav class="main-nav">
+        <button class="main-nav__toggle" type="button"></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="index.html">Главная</a>
+            <a class="main-nav__link" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a href="catalog.html">Каталог продукции</a>
+            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="main-nav__item main-nav__item--active">
-            <a>Подбор программы</a>
+            <a class="main-nav__link">Подбор программы</a>
           </li>
         </ul>
-        <button class="main-nav__toggle" type="button"></button>
       </nav>
     </header>
     <main class="page-main">
@@ -30,12 +31,18 @@
         <p class="program-choice__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
         <form class="program-choice__form form" method="post" action="https://echo.htmlacademy.ru">
           <fieldset class="form__about fieldset">
-            <label class="fieldset__label" for="name">Имя:<sup>*</sup></label>
-            <input class="fieldset__input" type="text" id="name" name="name" placeholder="Барсик">
-            <label class="fieldset__label" for="weight">Вес (кг):<sup>*</sup></label>
-            <input class="fieldset__input" type="text" id="weight" name="weight" placeholder="7">
-            <label class="fieldset__label" for="age">Возраст (лет):</label>
-            <input class="fieldset__input" type="text" id="age" name="age" placeholder="7">
+            <div class="fieldset__wrapper fieldset__wrapper--horizontal">
+              <label class="fieldset__label" for="name">Имя:<sup>*</sup></label>
+              <input class="fieldset__input" type="text" id="name" name="name" placeholder="Барсик">
+            </div>
+            <div class="fieldset__wrapper fieldset__wrapper--horizontal">
+              <label class="fieldset__label" for="weight">Вес (кг):<sup>*</sup></label>
+              <input class="fieldset__input" type="text" id="weight" name="weight" placeholder="7">
+            </div>
+            <div class="fieldset__wrapper fieldset__wrapper--horizontal">
+              <label class="fieldset__label" for="age">Возраст (лет):</label>
+              <input class="fieldset__input" type="text" id="age" name="age" placeholder="7">
+            </div>
             <div class="fieldset__wrapper">
               <input class="fieldset__input fieldset__input--radio" type="radio" id="lose-weight"                                          name="program" value="lose-weight" checked>
               <label class="fieldset__label" for="lose-weight">Похудение</label>
@@ -47,10 +54,14 @@
           </fieldset>
           <fieldset class="form__contacts fieldset">
             <legend class="fieldset__caption">Контактные данные (владельца кота)</legend>
-            <label class="fieldset__label" for="email">Email:<sup>*</sup></label>
-            <input class="fieldset__input fieldset__input--email" type="email" id="email" name="email" placeholder="kuklachev@gmail.com">
-            <label class="fieldset__label" for="phone">Телефон:<sup>*</sup></label>
-            <input class="fieldset__input fieldset__input--phone" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90">
+            <div class="fieldset__wrapper fieldset__wrapper--horizontal">
+              <label class="fieldset__label" for="email">Email:<sup>*</sup></label>
+              <input class="fieldset__input fieldset__input--email" type="email" id="email" name="email" placeholder="kuklachev@gmail.com">
+            </div>
+            <div class="fieldset__wrapper fieldset__wrapper--horizontal">
+              <label class="fieldset__label" for="phone">Телефон:<sup>*</sup></label>
+              <input class="fieldset__input fieldset__input--phone" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90">
+            </div>
           </fieldset>
           <div class="form__comment fieldset">
             <h3 class="fieldset__caption">Комментарий</h3>
@@ -58,20 +69,22 @@
           </div>
           <fieldset class="form__additional fieldset">
             <legend class="fieldset__caption">Дополнительно</legend>
-            <input type="checkbox" id="sugar" name="sugar" value="sugar" checked>
-            <label class="fieldset__label" for="sugar">Сахарозаменитель</label>
-            <input type="checkbox" id="water" name="water" value="water">
-            <label class="fieldset__label" for="water">Питьевая вода</label>
-            <input type="checkbox" id="milk" name="milk" value="milk">
-            <label class="fieldset__label"  for="milk">Молоко</label>
-            <input type="checkbox" id="vitamin" name="vitamin" value="vitamin">
-            <label class="fieldset__label"  for="vitamin">Витамины</label>
+            <div class="fieldset__wrapper fieldset__wrapper--additional">
+              <input type="checkbox" id="sugar" name="sugar" value="sugar" checked>
+              <label class="fieldset__label" for="sugar">Сахарозаменитель</label>
+              <input type="checkbox" id="water" name="water" value="water">
+              <label class="fieldset__label" for="water">Питьевая вода</label>
+              <input type="checkbox" id="milk" name="milk" value="milk">
+              <label class="fieldset__label"  for="milk">Молоко</label>
+              <input type="checkbox" id="vitamin" name="vitamin" value="vitamin">
+              <label class="fieldset__label"  for="vitamin">Витамины</label>
+            </div>
           </fieldset>
           <button class="form__button button" type="submit">Отправить заявку</button>
           <p class="form__requirement"><sup>*</sup> — Обязательные поля</p>
         </form>
       </section>
-      <section class="contacts">
+      <section class="contacts contacts--inner">
         <div class="contacts__wrapper">
           <h2 class="contacts__caption">Приглашаем к сотрудничеству дилеров!</h2>
           <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
@@ -82,7 +95,7 @@
     <footer class="page-footer">
       <div class="page-footer__logo">
         <a class="page-footer__logo-link" href="index.html">
-          <img class="page-footer__logo-image" src="http://placehold.it/150x100">
+          <img class="page-footer__logo-image" src="img/logo-footer.svg" width="128" height="24">
         </a>
       </div>
       <ul class="page-footer__social">
@@ -99,7 +112,7 @@
       <div class="page-footer__academy">
         <a class="page-footer__academy-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         <a href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="page-footer__academy-logo" src="http://placehold.it/150x100" alt="HTML Academy">
+          <img class="page-footer__academy-logo" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
         </a>
       </div>
     </footer>

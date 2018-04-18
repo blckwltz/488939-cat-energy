@@ -1,0 +1,34 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+
+  &--inner {
+    background-color: #f2f2f2;
+  }
+}
+
+.contacts__wrapper {
+  display: flex;
+  padding-top: 25px;
+  padding-left: 19px;
+  padding-right: 24px;
+  padding-bottom: 25px;
+}
+
+.contacts__caption {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.contacts__address {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.contacts__map {
+  width: 320px;
+  height: 400px;
+  background-image: url("../img/bg-map-mobile@1x.png");
+}

@@ -1,0 +1,32 @@
+.button {
+  display: block;
+  padding-top: 12px;
+  padding-left: 72px;
+  padding-right: 72px;
+  padding-bottom: 12px;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #68b738;
+
+  &--slider {
+    padding: 0;
+    font-family: "Oswald Regular", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #000000;
+    background-color: transparent;
+    border: none;
+  }
+
+  &--grey {
+    color: #727272;
+    background-color: #f2f2f2;
+  }
+}
+
+
