@@ -1,19 +1,19 @@
 .example {
   display: flex;
   flex-direction: column;
-  background-color: #f2f2f2;
+  background-color: $accent-color;
 }
 
 .example__caption {
   padding-left: 20px;
   font-size: 36px;
+  font-weight: 400;
   line-height: 60px;
 }
 
 .example__description {
-  padding-left: 20px;
-  padding-right: 21px;
-  font-family: "Arial", sans-serif;
+  @include standard-padding;
+  font-family: $alternate-font;
   font-size: 14px;
   line-height: 18px;
 }
@@ -21,6 +21,5 @@
 .example__wrapper {
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
-  padding-right: 20px;
+  @include standard-padding;
 }

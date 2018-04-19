@@ -9,9 +9,10 @@
   padding-left: 21px;
   padding-bottom: 35px;
   font-size: 36px;
+  font-weight: 400;
   line-height: 60px;
-  border-top: 2px solid #e6e6e6;
-  border-bottom: 2px solid #e6e6e6;
+  border-top: 2px solid $border-color;
+  border-bottom: 2px solid $border-color;
 }
 
 .catalog__list {
@@ -21,8 +22,8 @@
 .catalog__more {
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
-  padding-right: 20px;
+
+  @include standard-padding;
   padding-bottom: 25px;
   border-bottom: 2px solid #ededed;
 }
@@ -30,26 +31,22 @@
 .catalog__toggle {
   position: relative;
   padding-top: 75px;
-  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-family: $main-font;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   border: none;
 
   &::before {
-    content: url("../img/icon-plus-mobile.svg");
-    display: block;
-    position: absolute;
-    top: 20px;
-    left: 125px;
-    width: 30px;
-    height: 30px;
+    @include pseudo-element(20px, 125px, 30px, 30px);
+    background-image: url("../img/icon-plus-mobile.svg");
+    background-position: center;
   }
 }
 
 .catalog__description {
   align-self: center;
-  font-family: "Arial", sans-serif;
+  font-family: $alternate-font;
   font-size: 12px;
   line-height: 16px;
 }

@@ -1,6 +1,5 @@
 .offer {
-  padding-left: 20px;
-  padding-right: 20px;
+  @include standard-padding;
 }
 
 .offer__wrapper {
@@ -13,19 +12,15 @@
   padding-left: 59px;
   padding-right: 61px;
   padding-bottom: 40px;
-  font-family: "Arial", sans-serif;
+  font-family: $alternate-font;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
   color: #ffffff;
 
   &::before {
-    content: url("../img/icon-gift.svg");
-    display: block;
-    position: absolute;
-    top: 65px;
-    left: 113px;
-    width: 56px;
-    height: 60px;
+    @include pseudo-element(65px, 113px, 56px, 60px);
+    background-image: url("../img/icon-gift.svg");
+    background-position: center;
   }
 }

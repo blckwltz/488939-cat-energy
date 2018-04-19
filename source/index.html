@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo">
         <img class="page-header__logo-image" src="img/logo-mobile.svg" width="192" height="38" alt="CAT ENERGY">
       </a>
+      <button class="page-header__menu-toggle" type="button"></button>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"></button>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--active">
             <a class="main-nav__link">Главная</a>
@@ -29,7 +29,7 @@
       <section class="product">
         <h1 class="product__caption">Функциональное питание для котов</h1>
         <p class="product__slogan">Занялся собой? Займись котом!</p>
-        <a class="product__button button" href="form.html">Подобрать программу</a>
+        <a class="button product__button" href="form.html">Подобрать программу</a>
       </section>
       <div class="programs">
         <section class="programs__card">
@@ -82,11 +82,11 @@
               <div class="slider__image slider__image--after"></div>
             </div>
             <div class="slider__controls">
-              <button class="button--slider button" type="button">Было</button>
+              <button class="button button--slider" type="button">Было</button>
               <div class="slider__progress">
-                <div class="slider__progress--inner"></div>
+                <div class="slider__progress slider__progress--inner"></div>
               </div>
-              <button class="button--slider button" type="button">Стало</button>
+              <button class="button button--slider" type="button">Стало</button>
             </div>
           </div>
         </div>

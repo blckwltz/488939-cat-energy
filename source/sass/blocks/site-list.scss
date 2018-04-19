@@ -5,8 +5,7 @@
 }
 
 .site-list__item {
-  padding-left: 20px;
-  padding-right: 20px;
+  @include standard-padding;
   padding-bottom: 24px;
-  border-bottom: 2px solid #ededed;
+  border-bottom: 2px solid $border-color-alternate-2;
 }
