@@ -54,7 +54,7 @@
   line-height: 16px;
   text-decoration: none;
   text-transform: uppercase;
-  border-top: 2px solid $border-color-alternate-1;
+  border-top: 2px solid $border-color-alternate-dark;
 
   &::before {
     @include pseudo-element(17px, 100px, 24px, 11px);

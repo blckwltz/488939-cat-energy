@@ -18,8 +18,8 @@
   padding-bottom: 20px;
 
   @include standard-padding;
-  border-top: 2px solid $border-color-alternate-2;
-  border-bottom: 2px solid $border-color-alternate-2;
+  border-top: 2px solid $border-color-alternate-light;
+  border-bottom: 2px solid $border-color-alternate-light;
 
   &--horizontal {
     flex-direction: row;
