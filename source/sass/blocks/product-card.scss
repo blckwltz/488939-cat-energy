@@ -36,23 +36,13 @@
   justify-content: space-between;
   width: 100%;
   margin-bottom: 12px;
+  font-family: $alternate-font;
+  font-size: 14px;
+  line-height: 14px;
 }
 
 .product-card__field {
   text-align: left;
-
-  &--left {
-    font-family: $alternate-font;
-    font-size: 14px;
-    line-height: 14px;
-  }
-
-  &--right {
-    font-family: $alternate-font;
-    font-size: 14px;
-    line-height: 14px;
-    text-align: right;
-  }
 }
 
 .product-card__value {
