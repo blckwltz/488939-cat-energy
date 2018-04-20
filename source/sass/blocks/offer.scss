@@ -1,0 +1,26 @@
+.offer {
+  @include standard-padding;
+}
+
+.offer__wrapper {
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+}
+
+.offer__description {
+  position: relative;
+  padding-top: 185px;
+  padding-left: 59px;
+  padding-right: 61px;
+  padding-bottom: 40px;
+  font-family: $alternate-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+
+  &::before {
+    @include pseudo-element(65px, 113px, 56px, 60px);
+    background-image: url("../img/icon-gift.svg");
+    background-position: center;
+  }
+}

@@ -1,0 +1,52 @@
+.catalog {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog__caption {
+  margin: 0;
+  padding-top: 25px;
+  padding-left: 21px;
+  padding-bottom: 35px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 60px;
+  border-top: 2px solid $border-color;
+  border-bottom: 2px solid $border-color;
+}
+
+.catalog__list {
+  padding: 0;
+}
+
+.catalog__more {
+  display: flex;
+  flex-direction: column;
+
+  @include standard-padding;
+  padding-bottom: 25px;
+  border-bottom: 2px solid #ededed;
+}
+
+.catalog__toggle {
+  position: relative;
+  padding-top: 75px;
+  font-family: $main-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  border: none;
+
+  &::before {
+    @include pseudo-element(20px, 125px, 30px, 30px);
+    background-image: url("../img/icon-plus-mobile.svg");
+    background-position: center;
+  }
+}
+
+.catalog__description {
+  align-self: center;
+  font-family: $alternate-font;
+  font-size: 12px;
+  line-height: 16px;
+}

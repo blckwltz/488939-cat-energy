@@ -1,0 +1,24 @@
+.main-nav {
+  flex-grow: 1;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  border-top: 2px solid $border-color;
+}
+
+.main-nav__link {
+  text-decoration: none;
+}

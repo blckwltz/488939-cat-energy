@@ -1,0 +1,61 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+}
+
+.slider__description {
+  margin: auto;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.slider__wrapper {
+  display: flex;
+  margin-top: 35px;
+  margin-bottom: 40px;
+}
+
+.slider__image {
+  width: 280px;
+  height: 238px;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-position: -18px 0;
+
+  &--before {
+    background-image: url("../img/before-mobile@1x.png");
+  }
+
+  &--after {
+    display: none;
+    background-image: url("../img/after-mobile@1x.png");
+  }
+}
+
+.slider__controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.slider__progress {
+  width: 72px;
+  height: 6px;
+  padding-top: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-bottom: 4px;
+  background-color: #ffffff;
+  border: 1px solid #cdcdcd;
+  border-radius: 10px;
+}
+
+.slider__progress--inner {
+  width: 35px;
+  height: 6px;
+  padding: 0;
+  background-color: $main-color;
+  border: 0;
+}

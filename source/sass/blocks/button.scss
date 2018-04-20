@@ -1,0 +1,31 @@
+.button {
+  display: block;
+  padding-top: 12px;
+  padding-left: 72px;
+  padding-right: 72px;
+  padding-bottom: 12px;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: $main-color;
+
+  &--slider {
+    padding: 0;
+    font-family: $main-font;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #000000;
+    background-color: transparent;
+    border: none;
+  }
+
+  &--grey {
+    color: #727272;
+    background-color: $accent-color;
+  }
+}

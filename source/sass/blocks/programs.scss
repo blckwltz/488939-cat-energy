@@ -1,0 +1,64 @@
+.programs {
+  display: flex;
+  flex-direction: column;
+}
+
+.programs__card {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  @include standard-padding;
+  background-color: $accent-color;
+}
+
+.programs__caption {
+  position: relative;
+  padding-top: 25px;
+  padding-left: 72px;
+  padding-bottom: 20px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 37px;
+  text-transform: uppercase;
+
+  &::before {
+    @include pseudo-element(20px, 0, 50px, 50px);
+    background-color: $main-color;
+    border-radius: 50%;
+  }
+
+  &--lose-weight::before {
+    background-image: url("../img/icon-cat-slim.svg");
+    background-position: center;
+  }
+
+  &--gain-weight::before {
+    background-image: url("../img/icon-cat-pro.svg");
+    background-position: center;
+  }
+}
+
+.programs__description {
+  font-family: $alternate-font;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.programs__link {
+  display: block;
+  position: relative;
+  padding-top: 18px;
+  padding-bottom: 20px;
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-top: 2px solid $border-color-alternate-dark;
+
+  &::before {
+    @include pseudo-element(17px, 100px, 24px, 11px);
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-position: center;
+  }
+}

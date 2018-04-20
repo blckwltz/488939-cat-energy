@@ -1,0 +1,11 @@
+.site-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.site-list__item {
+  @include standard-padding;
+  padding-bottom: 24px;
+  border-bottom: 2px solid $border-color-alternate-light;
+}
