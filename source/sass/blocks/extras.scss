@@ -16,3 +16,11 @@
 .extras__list {
   padding: 0;
 }
+
+@media (min-width: $tablet-width) {
+  .extras__caption {
+    font-size: 36px;
+    line-height: 36px;
+    border: none;
+  }
+}

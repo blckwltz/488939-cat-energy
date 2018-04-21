@@ -1,5 +1,6 @@
 .features {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .features__card {
@@ -22,4 +23,32 @@
   font-family: $alternate-font;
   font-size: 12px;
   line-height: 12px;
+}
+
+.features__cost {
+  margin: auto;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .features {
+    width: 100%;
+  }
+
+  .features__cost {
+    width: 122px;
+    margin: 0;
+    margin-left: auto;
+    text-align: right;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features__cost {
+    width: 100%;
+    margin-left: 0;
+    text-align: left;
+  }
 }

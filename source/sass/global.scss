@@ -14,10 +14,26 @@
     url("../fonts/oswaldmedium.woff") format("woff");
 }
 
+html {
+  background-color: cornflowerblue;
+}
+
 body {
   width: 320px;
   margin: 0 auto;
   font-family: $main-font;
   font-weight: 400;
   background-color: #ffffff;
+}
+
+@media (min-width: $tablet-width) {
+  body {
+    width: 768px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  body {
+    width: 1440px;
+  }
 }

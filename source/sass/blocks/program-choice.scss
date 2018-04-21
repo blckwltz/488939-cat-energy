@@ -22,3 +22,15 @@
   line-height: 18px;
   text-transform: uppercase;
 }
+
+@media (min-width: $tablet-width) {
+  .program-choice__caption {
+    font-size: 60px;
+    border: none;
+  }
+
+  .program-choice__description {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

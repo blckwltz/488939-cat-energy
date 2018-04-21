@@ -85,3 +85,58 @@
   line-height: 16px;
   text-align: center;
 }
+
+@media (min-width: $tablet-width) {
+  .form__fieldset-wrapper {
+    border: 1px solid $border-color;
+
+    &--horizontal {
+      border: none;
+    }
+
+    &--no-border {
+      flex-direction: row;
+      flex-wrap: wrap;
+      border: none;
+    }
+
+    &--narrow {
+      width: 110px;
+    }
+  }
+
+  .form__label {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .form__input {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .form__button {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .form__requirement {
+    font-size: 16px;
+  }
+
+  .form__wrapper {
+    display: flex;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__fieldset {
+    flex-direction: row;
+  }
+
+  .form__fieldset-wrapper {
+    &--narrow {
+      width: auto;
+    }
+  }
+}

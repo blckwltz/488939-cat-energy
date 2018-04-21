@@ -68,3 +68,19 @@
   line-height: 16px;
   text-decoration: none;
 }
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .page-footer__social {
+    width: 125px;
+    border: none;
+  }
+
+  .page-footer__academy {
+    width: 162px;
+  }
+}

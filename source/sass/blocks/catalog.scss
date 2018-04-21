@@ -22,10 +22,6 @@
 .catalog__more {
   display: flex;
   flex-direction: column;
-
-  @include standard-padding;
-  padding-bottom: 25px;
-  border-bottom: 2px solid #ededed;
 }
 
 .catalog__toggle {
@@ -35,6 +31,7 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  background-color: #ffffff;
   border: none;
 
   &::before {
@@ -49,4 +46,15 @@
   font-family: $alternate-font;
   font-size: 12px;
   line-height: 16px;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog__caption {
+    font-size: 60px;
+    border: none;
+  }
+
+  .catalog__more {
+    border: 2px solid $border-color;
+  }
 }

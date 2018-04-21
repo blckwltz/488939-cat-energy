@@ -3,13 +3,6 @@
   flex-direction: column;
 }
 
-.slider__description {
-  margin: auto;
-  font-size: 14px;
-  line-height: 20px;
-  text-transform: uppercase;
-}
-
 .slider__wrapper {
   display: flex;
   margin-top: 35px;
@@ -58,4 +51,10 @@
   padding: 0;
   background-color: $main-color;
   border: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .slider {
+    background-color: $accent-color;
+  }
 }

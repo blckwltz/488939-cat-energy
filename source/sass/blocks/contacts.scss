@@ -33,3 +33,36 @@
   height: 400px;
   background-image: url("../img/bg-map-mobile@1x.png");
 }
+
+@media (min-width: $tablet-width) {
+  .contacts__wrapper {
+    justify-content: space-between;
+  }
+
+  .contacts__caption {
+    width: 121px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .contacts__address {
+    width: 155px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    display: block;
+    position: relative;
+  }
+
+  .contacts__wrapper {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 570px;
+    height: 200px;
+    background-color: #ffffff;
+  }
+}

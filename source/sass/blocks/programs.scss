@@ -62,3 +62,41 @@
     background-position: center;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .programs__card {
+    padding-right: 285px;
+  }
+
+  .programs__caption {
+    padding-left: 20px;
+    font-size: 36px;
+  }
+
+  .programs__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .programs__link {
+    font-size: 20px;
+    line-height: 20px;
+    border: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programs {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .programs__card {
+    padding-left: 52px;
+    padding-right: 56px;
+  }
+
+  .programs__caption {
+    padding-left: 216px;
+  }
+}

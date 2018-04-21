@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" type="text/css" rel="stylesheet">
   </head>
   <body>
@@ -70,18 +71,24 @@
           <fieldset class="form__fieldset">
             <legend class="form__fieldset-caption">Дополнительно</legend>
             <div class="form__fieldset-wrapper form__fieldset-wrapper--no-border">
-              <input class="form__input form__input--checkbox" type="checkbox" id="sugar" name="sugar" value="sugar" checked>
-              <label class="form__label" for="sugar">Сахарозаменитель</label>
-              <input class="form__input form__input--checkbox" type="checkbox" id="water" name="water" value="water">
-              <label class="form__label" for="water">Питьевая вода</label>
-              <input class="form__input form__input--checkbox" type="checkbox" id="milk" name="milk" value="milk">
-              <label class="form__label"  for="milk">Молоко</label>
-              <input class="form__input form__input--checkbox" type="checkbox" id="vitamin" name="vitamin" value="vitamin">
-              <label class="form__label"  for="vitamin">Витамины</label>
+              <div class="form__fieldset-wrapper form__fieldset-wrapper--no-border form__fieldset-wrapper--narrow">
+                <input class="form__input form__input--checkbox" type="checkbox" id="sugar" name="sugar" value="sugar" checked>
+                <label class="form__label" for="sugar">Сахарозаменитель</label>
+                <input class="form__input form__input--checkbox" type="checkbox" id="water" name="water" value="water">
+                <label class="form__label" for="water">Питьевая вода</label>
+              </div>
+              <div class="form__fieldset-wrapper form__fieldset-wrapper--no-border form__fieldset-wrapper--narrow">
+                <input class="form__input form__input--checkbox" type="checkbox" id="milk" name="milk" value="milk">
+                <label class="form__label"  for="milk">Молоко</label>
+                <input class="form__input form__input--checkbox" type="checkbox" id="vitamin" name="vitamin" value="vitamin">
+                <label class="form__label"  for="vitamin">Витамины</label>
+              </div>
             </div>
           </fieldset>
-          <button class="button form__button" type="submit">Отправить заявку</button>
-          <p class="form__requirement"><sup>*</sup> — Обязательные поля</p>
+          <div class="form__wrapper">
+            <button class="button form__button" type="submit">Отправить заявку</button>
+            <p class="form__requirement"><sup>*</sup> — Обязательные поля</p>
+          </div>
         </form>
       </section>
       <section class="contacts contacts--grey">

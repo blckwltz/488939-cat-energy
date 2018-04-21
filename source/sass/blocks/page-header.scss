@@ -20,3 +20,19 @@
   background-position: center;
   border: none;
 }
+
+@media (min-width: $tablet-width) {
+  .page-header__logo-image {
+    margin-right: 95px;
+  }
+
+  .page-header__menu-toggle {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__logo-image {
+    margin-right: 538px;
+  }
+}
