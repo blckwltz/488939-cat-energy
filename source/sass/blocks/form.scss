@@ -4,8 +4,6 @@
 }
 
 .form__fieldset {
-  display: flex;
-  flex-direction: column;
   margin: 0;
   padding: 0;
   border: none;
@@ -20,6 +18,10 @@
   @include standard-padding;
   border-top: 2px solid $border-color-alternate-light;
   border-bottom: 2px solid $border-color-alternate-light;
+
+  &--wide {
+    border: none;
+  }
 
   &--horizontal {
     flex-direction: row;
@@ -90,6 +92,10 @@
   .form__fieldset-wrapper {
     border: 1px solid $border-color;
 
+    &--wide {
+      border: none;
+    }
+
     &--horizontal {
       border: none;
     }
@@ -130,11 +136,12 @@
 }
 
 @media (min-width: $desktop-width) {
-  .form__fieldset {
-    flex-direction: row;
-  }
-
   .form__fieldset-wrapper {
+    &--wide {
+      display: flex;
+      flex-direction: row;
+    }
+
     &--narrow {
       width: auto;
     }

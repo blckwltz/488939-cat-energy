@@ -9,7 +9,6 @@
 .main-nav__list {
   margin: 0;
   padding: 0;
-  font-weight: 400;
   list-style: none;
 }
 
@@ -42,5 +41,15 @@
     &--active {
       border-bottom: 2px solid $main-color;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    font-size: 20px;
+  }
+
+  .main-nav__list {
+    width: 478px;
   }
 }

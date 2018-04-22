@@ -32,36 +32,42 @@
         <p class="program-choice__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
         <form class="program-choice__form form" method="post" action="https://echo.htmlacademy.ru">
           <fieldset class="form__fieldset">
-            <div class="form__fieldset-wrapper form__fieldset-wrapper--horizontal">
-              <label class="form__label" for="name">Имя:<sup>*</sup></label>
-              <input class="form__input" type="text" id="name" name="name" placeholder="Барсик">
-            </div>
-            <div class="form__fieldset-wrapper form__fieldset-wrapper--horizontal">
-              <label class="form__label" for="weight">Вес (кг):<sup>*</sup></label>
-              <input class="form__input" type="text" id="weight" name="weight" placeholder="7">
-            </div>
-            <div class="form__fieldset-wrapper form__fieldset-wrapper--horizontal">
-              <label class="form__label" for="age">Возраст (лет):</label>
-              <input class="form__input" type="text" id="age" name="age" placeholder="7">
-            </div>
-            <div class="form__fieldset-wrapper">
-              <input class="form__input form__input--radio" type="radio" id="lose-weight"                                          name="program" value="lose-weight" checked>
-              <label class="form__label" for="lose-weight">Похудение</label>
-              <input class="form__input form__input--radio" type="radio" id="gain-weight"                                          name="program" value="gain-weight">
-              <label class="form__label" for="gain-weight">Набор массы</label>
-              <input class="form__input form__input--radio" type="radio" id="need-advice"                                          name="program" value="need-advice">
-              <label class="form__label" for="need-advice">Не знаю (нужен ваш совет)</label>
+            <div class="form__fieldset-wrapper form__fieldset-wrapper--wide">
+              <div class="form__fieldset-wrapper form__fieldset-wrapper--no-border">
+                <div class="form__fieldset-wrapper form__fieldset-wrapper--horizontal">
+                  <label class="form__label" for="name">Имя:<sup>*</sup></label>
+                  <input class="form__input" type="text" id="name" name="name" placeholder="Барсик">
+                </div>
+                <div class="form__fieldset-wrapper form__fieldset-wrapper--horizontal">
+                  <label class="form__label" for="weight">Вес (кг):<sup>*</sup></label>
+                  <input class="form__input" type="text" id="weight" name="weight" placeholder="7">
+                </div>
+                <div class="form__fieldset-wrapper form__fieldset-wrapper--horizontal">
+                  <label class="form__label" for="age">Возраст (лет):</label>
+                  <input class="form__input" type="text" id="age" name="age" placeholder="7">
+                </div>
+              </div>
+              <div class="form__fieldset-wrapper">
+                <input class="form__input form__input--radio" type="radio" id="lose-weight"                                          name="program" value="lose-weight" checked>
+                <label class="form__label" for="lose-weight">Похудение</label>
+                <input class="form__input form__input--radio" type="radio" id="gain-weight"                                          name="program" value="gain-weight">
+                <label class="form__label" for="gain-weight">Набор массы</label>
+                <input class="form__input form__input--radio" type="radio" id="need-advice"                                          name="program" value="need-advice">
+                <label class="form__label" for="need-advice">Не знаю (нужен ваш совет)</label>
+              </div>
             </div>
           </fieldset>
           <fieldset class="form__fieldset">
             <legend class="form__fieldset-caption">Контактные данные (владельца кота)</legend>
-            <div class="form__fieldset-wrapper form__fieldset-wrapper--horizontal">
-              <label class="form__label" for="email">Email:<sup>*</sup></label>
-              <input class="form__input form__input--email" type="email" id="email" name="email" placeholder="kuklachev@gmail.com">
-            </div>
-            <div class="form__fieldset-wrapper form__fieldset-wrapper--horizontal">
-              <label class="form__label" for="phone">Телефон:<sup>*</sup></label>
-              <input class="form__input form__input--phone" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90">
+            <div class="form__fieldset-wrapper form__fieldset-wrapper--wide">
+              <div class="form__fieldset-wrapper form__fieldset-wrapper--horizontal">
+                <label class="form__label" for="email">Email:<sup>*</sup></label>
+                <input class="form__input form__input--email" type="email" id="email" name="email" placeholder="kuklachev@gmail.com">
+              </div>
+              <div class="form__fieldset-wrapper form__fieldset-wrapper--horizontal">
+                <label class="form__label" for="phone">Телефон:<sup>*</sup></label>
+                <input class="form__input form__input--phone" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90">
+              </div>
             </div>
           </fieldset>
           <div class="form__fieldset">
