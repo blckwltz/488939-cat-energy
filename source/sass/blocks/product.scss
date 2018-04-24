@@ -1,4 +1,6 @@
 .product {
+  width: 320px;
+  margin: 0 auto;
   text-align: center;
   background-image: url("../img/index-can-mobile@1x.png"),
     url("../img/index-background-mobile@1x.jpg");
@@ -31,6 +33,7 @@
 
 @media (min-width: $tablet-width) {
   .product {
+    width: 708px;
     text-align: left;
     background-image: url("../img/index-can-mobile@1x.png");
     background-repeat: no-repeat;
@@ -53,5 +56,11 @@
 
   .product__button {
     width: 245px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product {
+    width: 1220px;
   }
 }

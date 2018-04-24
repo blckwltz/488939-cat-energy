@@ -1,5 +1,5 @@
 .offer {
-  @include standard-padding;
+  @include container;
 }
 
 .offer__wrapper {
@@ -8,6 +8,7 @@
 
 .offer__description {
   position: relative;
+  margin: 0;
   padding-top: 185px;
   padding-left: 59px;
   padding-right: 61px;
@@ -22,5 +23,14 @@
     @include pseudo-element(65px, 113px, 56px, 60px);
     background-image: url("../img/icon-gift.svg");
     background-position: center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .offer {
+    width: 245px;
+    height: 250px;
+    margin: 0;
+    padding: 0;
   }
 }

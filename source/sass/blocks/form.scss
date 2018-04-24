@@ -1,6 +1,8 @@
 .form {
   display: flex;
   flex-direction: column;
+
+  @include container;
 }
 
 .form__fieldset {
@@ -14,8 +16,6 @@
   flex-direction: column;
   padding-top: 20px;
   padding-bottom: 20px;
-
-  @include standard-padding;
   border-top: 2px solid $border-color-alternate-light;
   border-bottom: 2px solid $border-color-alternate-light;
 
@@ -40,7 +40,6 @@
 
 .form__fieldset-caption {
   padding-top: 25px;
-  padding-left: 20px;
   padding-bottom: 25px;
   font-size: 24px;
   font-weight: 400;
@@ -64,17 +63,10 @@
   line-height: 18px;
   text-transform: uppercase;
   border: 1px solid $border-color;
-
-  &--textarea {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
 }
 
 .form__button {
   margin-top: 34px;
-  margin-left: 20px;
-  margin-right: 20px;
   font-family: $main-font;
   font-size: 16px;
   line-height: 20px;
@@ -97,6 +89,7 @@
     }
 
     &--horizontal {
+      width: 100%;
       border: none;
     }
 
@@ -107,8 +100,14 @@
     }
 
     &--narrow {
-      width: 110px;
+      flex-direction: column;
+      width: 285px;
     }
+  }
+
+  .form__fieldset-caption {
+    font-size: 36px;
+    line-height: 36px;
   }
 
   .form__label {
@@ -132,6 +131,9 @@
 
   .form__wrapper {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 583px;
   }
 }
 
@@ -140,9 +142,15 @@
     &--wide {
       display: flex;
       flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &--horizontal {
+      width: 570px;
     }
 
     &--narrow {
+      flex-direction: row;
       width: auto;
     }
   }

@@ -1,4 +1,6 @@
 .example {
+  width: 320px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   background-color: $accent-color;
@@ -11,22 +13,29 @@
   line-height: 60px;
 }
 
+.example__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include container;
+}
+
 .example__description {
   font-family: $alternate-font;
   font-size: 14px;
   line-height: 18px;
 }
 
-.example__wrapper {
-  display: flex;
-  flex-direction: column;
-
-  @include standard-padding;
-}
-
 @media (min-width: $tablet-width) {
   .example {
+    width: 768px;
     background-color: #ffffff;
+    border-top: 2px solid $border-color;
+  }
+
+  .example__caption {
+    padding-left: 30px;
+    font-size: 60px;
   }
 
   .example__wrapper {
@@ -34,13 +43,20 @@
     flex-wrap: wrap;
     padding-bottom: 250px;
   }
+
+  .example__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .example {
+    width: 1440px;
     flex-direction: row;
     flex-wrap: wrap;
     background-color: $accent-color;
+    border: none;
   }
 
   .example__caption {
@@ -51,6 +67,8 @@
 
   .example__wrapper {
     width: 475px;
+    margin: 0;
+    padding: 0;
     padding-bottom: 70px;
   }
 }

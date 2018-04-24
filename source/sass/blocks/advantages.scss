@@ -1,17 +1,19 @@
 .advantages {
   display: flex;
   flex-direction: column;
+
+  @include container;
 }
 
 .advantages__caption {
-  padding-left: 20px;
   font-size: 36px;
   font-weight: 400;
   line-height: 60px;
 }
 
 .advantages__list {
-  @include standard-padding;
+  margin: 0;
+  padding: 0;
   font-family: $alternate-font;
   font-size: 14px;
   line-height: 18px;
@@ -57,7 +59,6 @@
   .advantages__list {
     display: flex;
     flex-wrap: wrap;
-    border-bottom: 2px solid $border-color;
   }
 
   .advantages__item {
@@ -70,6 +71,10 @@
 
 @media (min-width: $desktop-width) {
   .advantages__list {
-    border: none;
+    justify-content: space-between;
+  }
+
+  .advantages__item {
+    width: 285px;
   }
 }

@@ -25,6 +25,8 @@
 
 @media (min-width: $tablet-width) {
   .main-nav {
+    width: 439px;
+    flex-grow: 0;
     font-size: 18px;
     line-height: 25px;
   }
@@ -32,7 +34,6 @@
   .main-nav__list {
     display: flex;
     justify-content: space-between;
-    width: 439px;
   }
 
   .main-nav__item {
@@ -46,10 +47,7 @@
 
 @media (min-width: $desktop-width) {
   .main-nav {
-    font-size: 20px;
-  }
-
-  .main-nav__list {
     width: 478px;
+    font-size: 20px;
   }
 }

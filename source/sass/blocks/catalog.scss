@@ -1,12 +1,12 @@
 .catalog {
-  display: flex;
-  flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .catalog__caption {
   margin: 0;
   padding-top: 25px;
-  padding-left: 21px;
+  padding-left: 20px;
   padding-bottom: 35px;
   font-size: 36px;
   font-weight: 400;
@@ -16,6 +16,7 @@
 }
 
 .catalog__list {
+  margin: 0;
   padding: 0;
 }
 
@@ -49,12 +50,20 @@
 }
 
 @media (min-width: $tablet-width) {
+  .catalog {
+    @include container;
+  }
+
   .catalog__caption {
+    padding-left: 0;
     font-size: 60px;
     border: none;
   }
 
   .catalog__more {
+    padding-left: 39px;
+    padding-right: 39px;
+    padding-bottom: 17px;
     border: 2px solid $border-color;
   }
 }

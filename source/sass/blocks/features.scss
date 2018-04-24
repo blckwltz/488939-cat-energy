@@ -1,18 +1,17 @@
 .features {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .features__card {
   width: 122px;
   text-align: center;
-
-  &:first-child {
-    margin-right: 32px;
-  }
 }
 
 .features__caption {
+  flex-grow: 1;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;

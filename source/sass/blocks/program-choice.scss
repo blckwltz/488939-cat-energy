@@ -1,6 +1,8 @@
 .program-choice {
   display: flex;
   flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .program-choice__caption {
@@ -24,13 +26,25 @@
 }
 
 @media (min-width: $tablet-width) {
+  .program-choice {
+    @include container;
+  }
+
   .program-choice__caption {
+    padding-left: 0;
     font-size: 60px;
     border: none;
   }
 
   .program-choice__description {
+    padding-left: 40px;
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program-choice__description {
+    padding-left: 0;
   }
 }
