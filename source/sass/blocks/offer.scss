@@ -1,8 +1,9 @@
 .offer {
   @include container;
-}
-
-.offer__wrapper {
+  margin-top: 40px;
+  margin-bottom: 35px;
+  box-sizing: border-box;
+  background-color: $main-color;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
 }
 
@@ -10,9 +11,9 @@
   position: relative;
   margin: 0;
   padding-top: 185px;
-  padding-left: 59px;
-  padding-right: 61px;
-  padding-bottom: 40px;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-bottom: 44px;
   font-family: $alternate-font;
   font-size: 16px;
   line-height: 20px;
@@ -20,7 +21,7 @@
   color: #ffffff;
 
   &::before {
-    @include pseudo-element(65px, 113px, 56px, 60px);
+    @include pseudo-element(65px, 93px, 56px, 60px);
     background-image: url("../img/icon-gift.svg");
     background-position: center;
   }

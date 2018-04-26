@@ -1,7 +1,7 @@
 .product-card {
+  @include container;
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
 }
 
 .product-card__wrapper {
@@ -63,6 +63,9 @@
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
+    width: auto;
+    margin: 0;
+    padding: 0;
     background-color: $accent-color;
 
     &--extras {

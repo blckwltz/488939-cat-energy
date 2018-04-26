@@ -1,9 +1,12 @@
 .page-footer {
+  background-color: $accent-color;
+}
+
+.page-footer__wrapper {
   display: flex;
   flex-direction: column;
 
   @include container;
-  background-color: $accent-color;
 }
 
 .page-footer__logo {
@@ -70,7 +73,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .page-footer {
+  .page-footer__wrapper {
     flex-direction: row;
     justify-content: space-between;
   }
