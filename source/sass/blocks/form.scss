@@ -92,6 +92,12 @@
 
 @media (min-width: $tablet-width) {
   .form__fieldset-wrapper {
+    &--wide {
+      width: auto;
+      margin: 0;
+      padding: 0;
+    }
+
     &--horizontal {
       width: 100%;
       border: none;
@@ -99,6 +105,7 @@
 
     &--border {
       @include container;
+      box-sizing: border-box;
       border-left: 2px solid $border-color-alternate-light;
       border-right: 2px solid $border-color-alternate-light;
     }
@@ -139,11 +146,15 @@
   }
 
   .form__wrapper {
+    @include container;
+
     &--narrow {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 583px;
+      margin: 0;
+      padding: 0;
     }
   }
 }
