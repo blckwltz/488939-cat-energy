@@ -57,6 +57,8 @@
 
 @media (min-width: $tablet-width) {
   .slider {
+    width: 610px;
+    padding-right: 40px;
     background-color: $accent-color;
   }
 }

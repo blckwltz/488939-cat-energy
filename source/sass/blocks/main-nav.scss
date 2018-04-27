@@ -3,6 +3,10 @@
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
+
+  &--closed {
+    display: none;
+  }
 }
 
 .main-nav__list {
@@ -28,6 +32,10 @@
     flex-grow: 0;
     font-size: 18px;
     line-height: 25px;
+
+    &--closed {
+      display: block;
+    }
   }
 
   .main-nav__list {

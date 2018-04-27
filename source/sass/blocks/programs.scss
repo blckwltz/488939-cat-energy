@@ -14,7 +14,8 @@
 
 .programs__caption {
   position: relative;
-  padding-top: 25px;
+  margin-top: 30px;
+  margin-bottom: 9px;
   padding-left: 72px;
   padding-bottom: 20px;
   font-size: 24px;
@@ -23,7 +24,7 @@
   text-transform: uppercase;
 
   &::before {
-    @include pseudo-element(20px, 0, 50px, 50px);
+    @include pseudo-element(-6px, 2px, 50px, 50px);
     background-color: $main-color;
     border-radius: 50%;
   }
@@ -40,6 +41,7 @@
 }
 
 .programs__description {
+  margin: 0;
   font-family: $alternate-font;
   font-size: 14px;
   line-height: 18px;

@@ -36,17 +36,38 @@
     width: 100%;
   }
 
+  .features__caption {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .features__description {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
   .features__cost {
     width: 122px;
     margin: 0;
     margin-left: auto;
+    font-size: 20px;
     text-align: right;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .features {
+    width: 366px;
+  }
+
+  .features__card {
+    width: 162px;
+  }
+
   .features__cost {
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 325px;
     margin-left: 0;
     text-align: left;
   }

@@ -13,21 +13,29 @@
   @include container;
   display: flex;
   justify-content: space-between;
+
+  &--no-js {
+    justify-content: center;
+  }
 }
 
 .page-header__logo {
   margin-top: 10px;
-  margin-bottom: 17px;
+  margin-bottom: 10px;
 }
 
 .page-header__menu-toggle {
   width: 24px;
   height: 18px;
-  margin-top: 20px;
-  background-image: url("../img/icon-close.svg");
+  margin-top: 22px;
+  background-image: url("../img/icon-mobile-menu.svg");
   background-repeat: no-repeat;
   background-position: center;
   border: none;
+
+  &--no-js {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) {

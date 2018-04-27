@@ -91,12 +91,6 @@
 }
 
 @media (min-width: $tablet-width) {
-  .form__fieldset-caption {
-    margin-bottom: 70px;
-    font-size: 36px;
-    line-height: 36px;
-  }
-
   .form__fieldset-wrapper {
     &--horizontal {
       width: 100%;
@@ -120,6 +114,7 @@
   }
 
   .form__fieldset-caption {
+    margin-bottom: 70px;
     font-size: 36px;
     line-height: 36px;
   }

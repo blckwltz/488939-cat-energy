@@ -9,13 +9,13 @@
   <body>
     <header class="page-header">
       <div class="page-header__wrapper">
-        <div class="page-header__logo-wrapper">
+        <div class="page-header__logo-wrapper page-header__logo-wrapper--no-js">
           <a class="page-header__logo" href="index.html">
             <img class="page-header__logo-image" src="img/logo-mobile.svg" width="192" height="38" alt="CAT ENERGY">
           </a>
-          <button class="page-header__menu-toggle" type="button"></button>
+          <button class="page-header__menu-toggle page-header__menu-toggle--no-js" type="button"></button>
         </div>
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--closed">
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">Главная</a>
@@ -143,5 +143,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/menu.js"></script>
   </body>
 </html>
