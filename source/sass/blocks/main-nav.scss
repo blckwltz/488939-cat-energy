@@ -1,9 +1,12 @@
 .main-nav {
-  flex-grow: 1;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
+
+  &--closed {
+    display: none;
+  }
 }
 
 .main-nav__list {
@@ -21,4 +24,37 @@
 
 .main-nav__link {
   text-decoration: none;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    width: 439px;
+    flex-grow: 0;
+    font-size: 18px;
+    line-height: 25px;
+
+    &--closed {
+      display: block;
+    }
+  }
+
+  .main-nav__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-nav__item {
+    border: none;
+
+    &--active {
+      border-bottom: 2px solid $main-color;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    width: 478px;
+    font-size: 20px;
+  }
 }

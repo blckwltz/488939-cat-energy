@@ -1,6 +1,17 @@
-@mixin standard-padding() {
-  padding-left: 20px;
-  padding-right: 20px;
+@mixin container() {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    padding: 0 40px;
+  }
 }
 
 @mixin pseudo-element($top, $left, $width, $height) {

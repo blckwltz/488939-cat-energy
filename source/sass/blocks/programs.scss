@@ -1,20 +1,21 @@
 .programs {
   display: flex;
   flex-direction: column;
+
+  @include container;
 }
 
 .programs__card {
-  margin-left: 20px;
-  margin-right: 20px;
   margin-bottom: 20px;
-
-  @include standard-padding;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: $accent-color;
 }
 
 .programs__caption {
   position: relative;
-  padding-top: 25px;
+  margin-top: 30px;
+  margin-bottom: 9px;
   padding-left: 72px;
   padding-bottom: 20px;
   font-size: 24px;
@@ -23,7 +24,7 @@
   text-transform: uppercase;
 
   &::before {
-    @include pseudo-element(20px, 0, 50px, 50px);
+    @include pseudo-element(-6px, 2px, 50px, 50px);
     background-color: $main-color;
     border-radius: 50%;
   }
@@ -40,6 +41,7 @@
 }
 
 .programs__description {
+  margin: 0;
   font-family: $alternate-font;
   font-size: 14px;
   line-height: 18px;
@@ -60,5 +62,44 @@
     @include pseudo-element(17px, 100px, 24px, 11px);
     background-image: url("../img/icon-right-arrow-long.svg");
     background-position: center;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .programs__card {
+    padding-right: 285px;
+  }
+
+  .programs__caption {
+    padding-left: 20px;
+    font-size: 36px;
+  }
+
+  .programs__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .programs__link {
+    font-size: 20px;
+    line-height: 20px;
+    border: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programs {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .programs__card {
+    width: 462px;
+    padding-left: 52px;
+    padding-right: 56px;
+  }
+
+  .programs__caption {
+    padding-left: 216px;
   }
 }

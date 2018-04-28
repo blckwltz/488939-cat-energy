@@ -1,11 +1,10 @@
 .extras {
   display: flex;
   flex-direction: column;
-
-  @include standard-padding;
 }
 
 .extras__caption {
+  @include container;
   padding-bottom: 25px;
   font-size: 24px;
   font-weight: 400;
@@ -14,5 +13,26 @@
 }
 
 .extras__list {
+  margin: 0;
   padding: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .extras {
+    @include container;
+  }
+
+  .extras__caption {
+    font-size: 36px;
+    line-height: 36px;
+    border: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .extras {
+    width: 895px;
+    margin: 0;
+    padding: 0;
+  }
 }

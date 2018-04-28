@@ -1,26 +1,82 @@
 .example {
-  display: flex;
-  flex-direction: column;
   background-color: $accent-color;
 }
 
 .example__caption {
-  padding-left: 20px;
+  @include container;
   font-size: 36px;
   font-weight: 400;
   line-height: 60px;
 }
 
+.example__wrapper {
+  @include container;
+  display: flex;
+  flex-direction: column;
+}
+
 .example__description {
-  @include standard-padding;
   font-family: $alternate-font;
   font-size: 14px;
   line-height: 18px;
 }
 
-.example__wrapper {
-  display: flex;
-  flex-direction: column;
+@media (min-width: $tablet-width) {
+  .example {
+    background-color: #ffffff;
+    border-top: 2px solid $border-color;
+  }
 
-  @include standard-padding;
+  .example__caption {
+    padding-left: 30px;
+    font-size: 60px;
+  }
+
+  .example__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 250px;
+  }
+
+  .example__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: $accent-color;
+    border: none;
+  }
+
+  .example__content-wrapper {
+    @include container;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: linear-gradient(#ffffff 22%, $accent-color 22%);
+  }
+
+  .example__caption {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 70px;
+  }
+
+  .example__wrapper {
+    width: 570px;
+    margin: 0;
+    padding: 0;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .example__description {
+    width: 431px;
+  }
 }

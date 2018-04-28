@@ -1,7 +1,7 @@
 .product-card {
+  @include container;
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
 }
 
 .product-card__wrapper {
@@ -17,6 +17,10 @@
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+
+  a {
+    text-decoration: none;
+  }
 
   &--small {
     width: 100%;
@@ -52,4 +56,91 @@
 .product-card__button {
   width: 100%;
   margin-bottom: 17px;
+}
+
+@media (min-width: $tablet-width) {
+  .product-card {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    background-color: $accent-color;
+
+    &--extras {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background-color: #ffffff;
+    }
+  }
+
+  .product-card__wrapper {
+    align-items: center;
+    width: 249px;
+  }
+
+  .product-card__caption {
+    width: 126px;
+    font-size: 20px;
+    text-align: center;
+
+    &--small {
+      width: auto;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  .product-card__table {
+    width: 100%;
+    margin-bottom: 33px;
+    border-collapse: collapse;
+
+    & td {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #cdcdcd;
+    }
+  }
+
+  .product-card__field-wrapper {
+    width: 225px;
+  }
+
+  .product-card__button {
+    width: 105px;
+
+    &--extras {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product-card {
+    &--extras {
+      flex-wrap: nowrap;
+    }
+  }
+
+  .product-card__wrapper {
+    width: 169px;
+  }
+
+  .product-card__caption {
+    &--small {
+      width: 245px;
+      text-align: left;
+    }
+  }
+
+  .product-card__field-wrapper {
+    width: 285px;
+  }
+
+  .product-card__button {
+    width: 25px;
+  }
 }

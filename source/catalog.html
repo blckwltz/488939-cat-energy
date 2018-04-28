@@ -2,33 +2,38 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link href="css/style.css" type="text/css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="192" height="38" alt="CAT ENERGY">
-      </a>
-      <button class="page-header__menu-toggle" type="button"></button>
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="index.html">Главная</a>
-          </li>
-          <li class="main-nav__item main-nav__item--active">
-            <a class="main-nav__link">Каталог продукции</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="page-header__wrapper">
+        <div class="page-header__logo-wrapper page-header__logo-wrapper--no-js">
+          <a class="page-header__logo" href="index.html">
+            <img class="page-header__logo-image" src="img/logo-mobile.svg" width="192" height="38" alt="CAT ENERGY">
+          </a>
+          <button class="page-header__menu-toggle page-header__menu-toggle--no-js" type="button"></button>
+        </div>
+        <nav class="main-nav main-nav--closed">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item main-nav__item--active">
+              <a class="main-nav__link">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="page-main">
       <section class="catalog">
         <h1 class="catalog__caption">Каталог продукции</h1>
-        <ul class="catalog__list site-list">
+        <ul class="site-list catalog__list">
           <li class="site-list__item">
             <article class="product-card">
               <a class="product-card__link" href="#">
@@ -204,55 +209,57 @@
               <a class="button product-card__button" href="#">Заказать</a>
             </article>
           </li>
-        </ul>
-        <div class="catalog__more">
-          <button class="catalog__toggle" type="button">Показать еще 100500 товаров</button>
-          <p class="catalog__description">На самом деле вкусов гораздо больше!</p>
-          <a class="button catalog__button button--grey" href="#">Показать все</a>
-        </div>
-      </section>
-      <section class="extras">
-        <h2 class="extras__caption">Дополнительные товары</h2>
-        <ul class="extras__list site-list">
-          <li class="site-list__item product-card">
-            <h3 class="product-card__caption product-card__caption--small">Сахарозаменитель</h3>
-            <div class="product-card__field-wrapper">
-              <span class="product-card__field product-card__field">1 упаковка (100 г)</span>
-              <span class="product-card__field product-card__field">100 Р.</span>
+          <li class="site-list__item site-list__item--no-border">
+            <div class="catalog__more">
+              <button class="catalog__toggle" type="button">Показать еще 100500 товаров</button>
+              <p class="catalog__description">На самом деле вкусов гораздо больше!</p>
+              <a class="button catalog__button button--grey" href="#">Показать все</a>
             </div>
-            <a class="button product-card__button" href="#">Заказать</a>
-          </li>
-          <li class="site-list__item product-card">
-            <h3 class="product-card__caption product-card__caption--small">Питьевая вода</h3>
-            <div class="product-card__field-wrapper">
-              <span class="product-card__field product-card__field">5 литров</span>
-              <span class="product-card__field product-card__field">50 Р.</span>
-            </div>
-            <a class="button product-card__button" href="#">Заказать</a>
-          </li>
-          <li class="site-list__item product-card">
-            <h3 class="product-card__caption product-card__caption--small">Молоко</h3>
-            <div class="product-card__field-wrapper">
-              <span class="product-card__field product-card__field">1 литр</span>
-              <span class="product-card__field product-card__field">100 Р.</span>
-            </div>
-            <a class="button product-card__button" href="#">Заказать</a>
-          </li>
-          <li class="site-list__item product-card">
-            <h3 class="product-card__caption product-card__caption--small">Витамины</h3>
-            <div class="product-card__field-wrapper">
-              <span class="product-card__field product-card__field">1 упаковка (30 г)</span>
-              <span class="product-card__field product-card__field">300 Р.</span>
-            </div>
-            <a class="button product-card__button" href="#">Заказать</a>
           </li>
         </ul>
       </section>
-      <section class="offer">
-        <div class="offer__wrapper">
+      <div class="page-main__wrapper">
+        <section class="extras">
+          <h2 class="extras__caption">Дополнительные товары</h2>
+          <ul class="site-list site-list--extras extras__list">
+            <li class="site-list__item site-list__item--wide product-card product-card--extras">
+              <h3 class="product-card__caption product-card__caption--small">Сахарозаменитель</h3>
+              <div class="product-card__field-wrapper">
+                <span class="product-card__field">1 упаковка (100 г)</span>
+                <span class="product-card__field">100 Р.</span>
+              </div>
+              <a class="button product-card__button product-card__button--extras" href="#">Заказать</a>
+            </li>
+            <li class="site-list__item site-list__item--wide product-card product-card--extras">
+              <h3 class="product-card__caption product-card__caption--small">Питьевая вода</h3>
+              <div class="product-card__field-wrapper">
+                <span class="product-card__field">5 литров</span>
+                <span class="product-card__field">50 Р.</span>
+              </div>
+              <a class="button product-card__button product-card__button--extras" href="#">Заказать</a>
+            </li>
+            <li class="site-list__item site-list__item--wide product-card product-card--extras">
+              <h3 class="product-card__caption product-card__caption--small">Молоко</h3>
+              <div class="product-card__field-wrapper">
+                <span class="product-card__field">1 литр</span>
+                <span class="product-card__field">100 Р.</span>
+              </div>
+              <a class="button product-card__button product-card__button--extras" href="#">Заказать</a>
+            </li>
+            <li class="site-list__item site-list__item--wide product-card product-card--extras">
+              <h3 class="product-card__caption product-card__caption--small">Витамины</h3>
+              <div class="product-card__field-wrapper">
+                <span class="product-card__field">1 упаковка (30 г)</span>
+                <span class="product-card__field">300 Р.</span>
+              </div>
+              <a class="button product-card__button product-card__button--extras" href="#">Заказать</a>
+            </li>
+          </ul>
+        </section>
+        <section class="offer">
           <p class="offer__description">Закажите все и получите чехол для кота в подарок!</p>
-        </div>
-      </section>
+        </section>
+      </div>
       <section class="contacts contacts--grey">
         <div class="contacts__wrapper">
           <h2 class="contacts__caption">Приглашаем к сотрудничеству дилеров!</h2>
@@ -262,28 +269,31 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__logo">
-        <a class="page-footer__logo-link" href="index.html">
-          <img class="page-footer__logo-image" src="img/logo-footer.svg" width="128" height="24">
-        </a>
-      </div>
-      <ul class="page-footer__social">
-        <li class="page-footer__social-item">
-          <a class="page-footer__social-link page-footer__social-link--vk" href="#">VK</a>
-        </li>
-        <li class="page-footer__social-item">
-          <a class="page-footer__social-link page-footer__social-link--instagram" href="#">Instagram</a>
-        </li>
-        <li class="page-footer__social-item">
-          <a class="page-footer__social-link page-footer__social-link--facebook" href="#">Facebook</a>
-        </li>
-      </ul>
-      <div class="page-footer__academy">
-        <a class="page-footer__academy-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <a href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="page-footer__academy-logo" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
-        </a>
+      <div class="page-footer__wrapper">
+        <div class="page-footer__logo">
+          <a class="page-footer__logo-link" href="index.html">
+            <img class="page-footer__logo-image" src="img/logo-footer.svg" width="128" height="24">
+          </a>
+        </div>
+        <ul class="page-footer__social">
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link page-footer__social-link--vk" href="#">VK</a>
+          </li>
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link page-footer__social-link--instagram" href="#">Instagram</a>
+          </li>
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link page-footer__social-link--facebook" href="#">Facebook</a>
+          </li>
+        </ul>
+        <div class="page-footer__academy">
+          <a class="page-footer__academy-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a href="https://htmlacademy.ru/intensive/adaptive">
+            <img class="page-footer__academy-logo" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+          </a>
+        </div>
       </div>
     </footer>
+    <script src="js/menu.js"></script>
   </body>
 </html>

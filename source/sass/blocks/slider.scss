@@ -1,13 +1,7 @@
 .slider {
   display: flex;
   flex-direction: column;
-}
-
-.slider__description {
-  margin: auto;
-  font-size: 14px;
-  line-height: 20px;
-  text-transform: uppercase;
+  align-items: center;
 }
 
 .slider__wrapper {
@@ -37,6 +31,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 198px;
   margin-bottom: 35px;
 }
 
@@ -58,4 +53,16 @@
   padding: 0;
   background-color: $main-color;
   border: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .slider {
+    background-color: $accent-color;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider {
+    width: 610px;
+  }
 }

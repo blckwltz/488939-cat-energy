@@ -1,17 +1,19 @@
 .advantages {
   display: flex;
   flex-direction: column;
+
+  @include container;
 }
 
 .advantages__caption {
-  padding-left: 20px;
   font-size: 36px;
   font-weight: 400;
   line-height: 60px;
 }
 
 .advantages__list {
-  @include standard-padding;
+  margin: 0;
+  padding: 0;
   font-family: $alternate-font;
   font-size: 14px;
   line-height: 18px;
@@ -46,5 +48,33 @@
   &--clock::before {
     background-image: url("../img/advantage-clock@1x.png");
     background-position: center;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .advantages__caption {
+    font-size: 60px;
+  }
+
+  .advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .advantages__item {
+    width: 324px;
+    min-height: 113px;
+    padding-top: 117px;
+    padding-left: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages__list {
+    justify-content: space-between;
+  }
+
+  .advantages__item {
+    width: 285px;
   }
 }

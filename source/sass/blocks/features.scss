@@ -1,17 +1,17 @@
 .features {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .features__card {
   width: 122px;
   text-align: center;
-
-  &:first-child {
-    margin-right: 32px;
-  }
 }
 
 .features__caption {
+  flex-grow: 1;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
@@ -22,4 +22,53 @@
   font-family: $alternate-font;
   font-size: 12px;
   line-height: 12px;
+}
+
+.features__cost {
+  margin: auto;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .features {
+    width: 100%;
+  }
+
+  .features__caption {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .features__description {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .features__cost {
+    width: 122px;
+    margin: 0;
+    margin-left: auto;
+    font-size: 20px;
+    text-align: right;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features {
+    width: 366px;
+  }
+
+  .features__card {
+    width: 162px;
+  }
+
+  .features__cost {
+    display: flex;
+    justify-content: space-between;
+    width: 325px;
+    margin-left: 0;
+    text-align: left;
+  }
 }
