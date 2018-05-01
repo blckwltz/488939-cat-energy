@@ -1,6 +1,5 @@
 .product {
   @include container;
-  margin-bottom: 21px;
   text-align: center;
   background-image: url("../img/index-can-mobile@1x.png"),
     url("../img/index-background-mobile@1x.jpg");
@@ -9,6 +8,7 @@
 }
 
 .product__caption {
+  margin: 0;
   margin-top: 27px;
   margin-bottom: 25px;
   font-size: 36px;
@@ -19,7 +19,7 @@
 
 .product__slogan {
   margin: 0;
-  padding-bottom: 300px;
+  padding-bottom: 301px;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
@@ -32,6 +32,7 @@
 
 @media (min-width: $tablet-width) {
   .product {
+    min-height: 868px;
     text-align: left;
     background-image: url("../img/index-can-mobile@1x.png");
     background-repeat: no-repeat;
@@ -40,19 +41,50 @@
 
   .product__caption {
     width: 414px;
+    margin-top: 56px;
+    margin-bottom: 42px;
+    padding-left: 89px;
     font-size: 60px;
     line-height: 60px;
     color: #000000;
   }
 
   .product__slogan {
-    padding-bottom: 45px;
+    margin-bottom: 47px;
+    padding-left: 89px;
+    padding-bottom: 0;
     font-size: 20px;
     line-height: 20px;
     color: #000000;
   }
 
   .product__button {
-    width: 245px;
+    width: 206px;
+    margin-left: 89px;
+    padding-top: 17px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 17px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product {
+    min-height: 696px;
+  }
+
+  .product__caption {
+    margin-top: 169px;
+    padding-left: 80px;
+  }
+
+  .product__slogan {
+    margin-bottom: 52px;
+    padding-left: 80px;
+  }
+
+  .product__button {
+    margin-left: 80px;
   }
 }

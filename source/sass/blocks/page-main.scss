@@ -5,10 +5,10 @@
 
 @media (min-width: $desktop-width) {
   .page-main__wrapper {
+    @include container;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-
-    @include container;
+    margin-bottom: 85px;
   }
 }

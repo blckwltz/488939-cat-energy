@@ -38,6 +38,7 @@
     "node": "8.11"
   },
   "dependencies": {
+    "normalize.css": "^8.0.0",
     "npm": "^5.8.0"
   }
 }
