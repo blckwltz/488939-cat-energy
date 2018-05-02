@@ -11,7 +11,7 @@
 }
 
 .site-list__item {
-  padding-bottom: 24px;
+  padding-bottom: 25px;
   border-bottom: 2px solid $border-color-alternate-light;
 
   &--no-border {
@@ -20,6 +20,7 @@
 
   &--wide {
     padding: 0;
+    padding-bottom: 16px;
   }
 }
 
@@ -33,16 +34,25 @@
 
   .site-list__item {
     width: 324px;
+    min-height: 526px;
     margin: 0;
-    margin-bottom: 140px;
+    margin-bottom: 45px;
     padding: 0;
+    background-image: linear-gradient(#ffffff 18%, $accent-color 18%);
     border: none;
+
+    &--no-border {
+      background-image: none;
+    }
 
     &--wide {
       width: 100%;
+      min-height: 0;
       margin-bottom: 0;
       padding-left: 37px;
       padding-right: 37px;
+      padding-bottom: 27px;
+      background-image: none;
       border-left: 2px solid $border-color-alternate-dark;
       border-right: 2px solid $border-color-alternate-dark;
       border-bottom: 2px solid $border-color-alternate-dark;
@@ -62,10 +72,17 @@
   }
 
   .site-list__item {
-    width: 250px;
+    width: 245px;
+    margin-bottom: 48px;
 
     &--wide {
-      width: 817px;
+      width: 895px;
+      margin-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+      border-left: none;
+      border-right: 0;
     }
   }
 }

@@ -1,11 +1,12 @@
 .advantages {
+  @include container;
   display: flex;
   flex-direction: column;
-
-  @include container;
 }
 
 .advantages__caption {
+  margin: 0;
+  margin-bottom: 30px;
   font-size: 36px;
   font-weight: 400;
   line-height: 60px;
@@ -13,6 +14,7 @@
 
 .advantages__list {
   margin: 0;
+  margin-bottom: 20px;
   padding: 0;
   font-family: $alternate-font;
   font-size: 14px;
@@ -23,58 +25,79 @@
 .advantages__item {
   position: relative;
   padding-left: 80px;
-  padding-bottom: 25px;
+  padding-bottom: 26px;
 
   &::before {
-    @include pseudo-element(0, 0, 60px, 60px);
+    @include pseudo-element(-2px, 0, 60px, 60px);
     background-color: $main-color;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   &--leaf::before {
     background-image: url("../img/advantage-leaf@1x.png");
-    background-position: center;
   }
 
   &--powder::before {
     background-image: url("../img/advantage-powder@1x.png");
-    background-position: center;
   }
 
   &--dining::before {
     background-image: url("../img/advantage-dining@1x.png");
-    background-position: center;
   }
 
   &--clock::before {
     background-image: url("../img/advantage-clock@1x.png");
-    background-position: center;
   }
 }
 
 @media (min-width: $tablet-width) {
   .advantages__caption {
+    margin-top: 14px;
+    margin-bottom: 66px;
     font-size: 60px;
   }
 
   .advantages__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   .advantages__item {
     width: 324px;
-    min-height: 113px;
+    min-height: 142px;
     padding-top: 117px;
     padding-left: 0;
+    padding-bottom: 0;
+    margin-bottom: 58px;
+
+    &--dining {
+      margin-bottom: 12px;
+    }
+
+    &--clock {
+      margin-bottom: 12px;
+    }
+
+    &::before {
+      @include pseudo-element(5px, 1px, 80px, 80px);
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
+  .advantages__caption {
+    margin-top: 73px;
+  }
+
   .advantages__list {
-    justify-content: space-between;
+    margin-bottom: 0;
   }
 
   .advantages__item {
-    width: 285px;
+    width: 245px;
   }
 }

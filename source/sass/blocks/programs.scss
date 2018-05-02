@@ -1,12 +1,11 @@
 .programs {
+  @include container;
   display: flex;
   flex-direction: column;
-
-  @include container;
 }
 
 .programs__card {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   padding-left: 20px;
   padding-right: 20px;
   background-color: $accent-color;
@@ -42,6 +41,7 @@
 
 .programs__description {
   margin: 0;
+  margin-bottom: 22px;
   font-family: $alternate-font;
   font-size: 14px;
   line-height: 18px;
@@ -51,7 +51,7 @@
   display: block;
   position: relative;
   padding-top: 18px;
-  padding-bottom: 20px;
+  padding-bottom: 22px;
   font-size: 16px;
   line-height: 16px;
   text-decoration: none;
@@ -59,7 +59,7 @@
   border-top: 2px solid $border-color-alternate-dark;
 
   &::before {
-    @include pseudo-element(17px, 100px, 24px, 11px);
+    @include pseudo-element(21px, 97px, 24px, 11px);
     background-image: url("../img/icon-right-arrow-long.svg");
     background-position: center;
   }
@@ -67,23 +67,39 @@
 
 @media (min-width: $tablet-width) {
   .programs__card {
-    padding-right: 285px;
+    margin-bottom: 30px;
+    padding-right: 284px;
   }
 
   .programs__caption {
-    padding-left: 20px;
+    margin-top: 76px;
+    margin-bottom: 5px;
+    padding-left: 34px;
     font-size: 36px;
+
+    &::before {
+      @include pseudo-element(16px, 427px, 200px, 200px);
+    }
   }
 
   .programs__description {
+    width: 344px;
+    margin-bottom: 38px;
+    padding-left: 32px;
     font-size: 16px;
     line-height: 24px;
   }
 
   .programs__link {
+    padding-left: 34px;
+    padding-bottom: 62px;
     font-size: 20px;
     line-height: 20px;
     border: none;
+
+    &::before {
+      @include pseudo-element(23px, 165px, 24px, 11px);
+    }
   }
 }
 
@@ -91,15 +107,32 @@
   .programs {
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 27px;
   }
 
   .programs__card {
     width: 462px;
+    margin-bottom: 0;
     padding-left: 52px;
     padding-right: 56px;
   }
 
   .programs__caption {
-    padding-left: 216px;
+    margin-bottom: 54px;
+    padding-left: 162px;
+
+    &::before {
+      @include pseudo-element(-29px, 0, 100px, 100px);
+    }
+  }
+
+  .programs__description {
+    width: auto;
+    margin-bottom: 13px;
+    padding-left: 0;
+  }
+
+  .programs__link {
+    padding-left: 0;
   }
 }

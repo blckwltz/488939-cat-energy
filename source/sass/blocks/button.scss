@@ -15,7 +15,7 @@
   &--slider {
     padding: 0;
     font-family: $main-font;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 20px;
     text-transform: uppercase;
@@ -25,7 +25,28 @@
   }
 
   &--grey {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    line-height: 20px;
     color: #727272;
     background-color: $accent-color;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    &--slider {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button {
+    &--grey {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
   }
 }

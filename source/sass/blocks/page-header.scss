@@ -21,7 +21,7 @@
 
 .page-header__logo {
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 13px;
 }
 
 .page-header__menu-toggle {
@@ -44,11 +44,10 @@
   }
 
   .page-header__wrapper {
+    @include container;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
-    @include container;
   }
 
   .page-header__logo-wrapper {
@@ -58,8 +57,9 @@
     padding: 0;
   }
 
-  .page-header__logo {
+  .page-header__logo-image {
     width: 176px;
+    height: 58px;
   }
 
   .page-header__menu-toggle {
@@ -68,7 +68,13 @@
 }
 
 @media (min-width: $desktop-width) {
-  .page-header__logo {
+  .page-header {
+    position: absolute;
+    top: 0;
+  }
+
+  .page-header__logo-image {
     width: 204px;
+    height: 62px;
   }
 }
