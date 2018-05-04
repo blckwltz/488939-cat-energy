@@ -19,11 +19,19 @@
 
   &--before {
     background-image: url("../img/before-mobile@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/before-mobile@2x.png");
+    }
   }
 
   &--after {
     display: none;
     background-image: url("../img/after-mobile@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/after-mobile@2x.png");
+    }
   }
 }
 
@@ -45,24 +53,107 @@
   background-color: #ffffff;
   border: 1px solid #cdcdcd;
   border-radius: 6px;
-}
 
-.slider__progress--inner {
-  width: 35px;
-  height: 4px;
-  padding: 0;
-  background-color: $main-color;
-  border: 0;
+  &--inner {
+    width: 35px;
+    height: 4px;
+    padding: 0;
+    background-color: $main-color;
+    border: 0;
+  }
 }
 
 @media (min-width: $tablet-width) {
-  .slider {
-    min-height: 462px;
+  .slider__wrapper {
+    margin-top: 0;
+    margin-bottom: 22px;
+  }
+
+  .slider__image {
+    width: 571px;
+    height: 513px;
+
+    &--before {
+      background-image: url("../img/before-tablet@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/before-tablet@2x.png");
+      }
+    }
+
+    &--after {
+      background-image: url("../img/after-tablet@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/after-tablet@2x.png");
+      }
+    }
+  }
+
+  .slider__controls {
+    width: 568px;
+    margin-bottom: 75px;
+  }
+
+  .slider__progress {
+    position: relative;
+    width: 428px;
+    height: 6px;
+    padding: 0;
+    background-color: #dcdcdc;
+    border: none;
+
+    &--inner {
+      position: absolute;
+      top: -13px;
+      left: 201px;
+      width: 8px;
+      height: 8px;
+      background-color: $main-color;
+      border: 12px solid #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 1px 1px 1px #dcdcdc;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 0 2px 2px 2px #dcdcdc;
+      }
+
+      &:active {
+        box-shadow: 0 0 0 2px #68b738, 0 2px 2px 4px #dcdcdc;
+      }
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .slider {
     width: 610px;
+  }
+
+  .slider__wrapper {
+    margin-bottom: 46px;
+  }
+
+  .slider__image {
+    &--before {
+      background-image: url("../img/before-desktop@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/before-desktop@2x.png");
+      }
+    }
+
+    &--after {
+      background-image: url("../img/after-desktop@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/after-desktop@2x.png");
+      }
+    }
+  }
+
+  .slider__controls {
+    margin-left: 118px;
   }
 }

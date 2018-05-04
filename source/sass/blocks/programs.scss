@@ -28,12 +28,14 @@
     border-radius: 50%;
   }
 
-  &--lose-weight::before {
+  &--lose-weight::after {
+    @include pseudo-element(-9px, 10px, 35px, 49px);
     background-image: url("../img/icon-cat-slim.svg");
     background-position: center;
   }
 
-  &--gain-weight::before {
+  &--gain-weight::after {
+    @include pseudo-element(6px, -7px, 67px, 28px);
     background-image: url("../img/icon-cat-pro.svg");
     background-position: center;
   }
@@ -45,6 +47,7 @@
   font-family: $alternate-font;
   font-size: 14px;
   line-height: 18px;
+  color: #444444;
 }
 
 .programs__link {
@@ -63,6 +66,20 @@
     background-image: url("../img/icon-right-arrow-long.svg");
     background-position: center;
   }
+
+  &:hover {
+    &::before {
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+    }
+  }
+
+  &:active {
+    color: rgba(17, 17, 17, 0.5);
+
+    &::before {
+      opacity: 0.5;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -79,6 +96,14 @@
 
     &::before {
       @include pseudo-element(16px, 427px, 200px, 200px);
+    }
+
+    &--lose-weight::after {
+      @include pseudo-element(2px, 457px, 140px, 194px);
+    }
+
+    &--gain-weight::after {
+      @include pseudo-element(56px, 393px, 268px, 112px);
     }
   }
 
@@ -123,6 +148,14 @@
 
     &::before {
       @include pseudo-element(-29px, 0, 100px, 100px);
+    }
+
+    &--lose-weight::after {
+      @include pseudo-element(-35px, 14px, 70px, 97px);
+    }
+
+    &--gain-weight::after {
+      @include pseudo-element(-7px, -18px, 134px, 56px);
     }
   }
 

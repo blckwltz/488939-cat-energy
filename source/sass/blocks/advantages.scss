@@ -16,9 +16,6 @@
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
-  font-family: $alternate-font;
-  font-size: 14px;
-  line-height: 18px;
   list-style: none;
 }
 
@@ -36,24 +33,52 @@
 
   &--leaf::before {
     background-image: url("../img/advantage-leaf@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantage-leaf@2x.png");
+    }
   }
 
   &--powder::before {
     background-image: url("../img/advantage-powder@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantage-powder@2x.png");
+    }
   }
 
   &--dining::before {
     background-image: url("../img/advantage-dining@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantage-dining@2x.png");
+    }
   }
 
   &--clock::before {
     background-image: url("../img/advantage-clock@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantage-clock@2x.png");
+    }
   }
+}
+
+.advantages__description {
+  margin: 0;
+  font-family: $alternate-font;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+}
+
+.advantages__number {
+  display: none;
 }
 
 @media (min-width: $tablet-width) {
   .advantages__caption {
-    margin-top: 14px;
+    margin-top: 15px;
     margin-bottom: 66px;
     font-size: 60px;
   }
@@ -62,8 +87,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    font-size: 16px;
-    line-height: 24px;
   }
 
   .advantages__item {
@@ -86,6 +109,23 @@
       @include pseudo-element(5px, 1px, 80px, 80px);
     }
   }
+
+  .advantages__description {
+    position: relative;
+    z-index: 2;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .advantages__number {
+    display: block;
+    position: absolute;
+    top: -33px;
+    left: 115px;
+    font-size: 281px;
+    line-height: 281px;
+    color: $accent-color;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -99,5 +139,11 @@
 
   .advantages__item {
     width: 245px;
+    margin: 0;
+
+    &--dining,
+    &--clock {
+      margin: 0;
+    }
   }
 }

@@ -1,5 +1,4 @@
 .page-header {
-  background-color: #ffffff;
   border-bottom: 2px solid $border-color;
 }
 
@@ -20,8 +19,11 @@
 }
 
 .page-header__logo {
+  display: block;
+  width: 192px;
+  height: 38px;
   margin-top: 10px;
-  margin-bottom: 13px;
+  margin-bottom: 15px;
 }
 
 .page-header__menu-toggle {
@@ -57,9 +59,20 @@
     padding: 0;
   }
 
-  .page-header__logo-image {
+  .page-header__logo {
     width: 176px;
     height: 58px;
+    margin: 0;
+  }
+
+  .page-header__logo[href] .page-header__logo-image {
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
   }
 
   .page-header__menu-toggle {
@@ -68,12 +81,11 @@
 }
 
 @media (min-width: $desktop-width) {
-  .page-header {
+  .page-header__wrapper {
     position: absolute;
-    top: 0;
   }
 
-  .page-header__logo-image {
+  .page-header__logo {
     width: 204px;
     height: 62px;
   }
