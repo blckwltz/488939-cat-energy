@@ -33,9 +33,10 @@
   border: none;
 
   &::before {
-    @include pseudo-element(25px, 125px, 30px, 30px);
+    @include pseudo-element(25px, 50%, 30px, 30px);
     background-image: url("../img/icon-plus-mobile.svg");
     background-position: center;
+    transform: translateX(-50%);
   }
 }
 
@@ -47,6 +48,7 @@
   font-family: $alternate-font;
   font-size: 12px;
   line-height: 16px;
+  color: #444444;
 }
 
 @media (min-width: $tablet-width) {
@@ -57,7 +59,7 @@
 
   .catalog__caption {
     margin-top: 56px;
-    margin-bottom: 70px;
+    margin-bottom: 83px;
     padding-left: 0;
     font-size: 60px;
     border: none;
@@ -68,7 +70,7 @@
     width: auto;
     min-height: 412px;
     margin: 0;
-    margin-top: 95px;
+    margin-top: 83px;
     padding: 0;
     padding-bottom: 17px;
     border: 2px solid $border-color;
@@ -79,6 +81,11 @@
     padding: 0;
     padding-top: 162px;
     font-size: 20px;
+
+    &::before {
+      @include pseudo-element(52px, 50%, 60px, 60px);
+      background-image: url("../img/icon-plus.svg");
+    }
   }
 
   .catalog__description {

@@ -3,7 +3,6 @@
 }
 
 .example__caption {
-  @include container;
   margin-top: 17px;
   margin-bottom: 23px;
   font-size: 36px;
@@ -13,8 +12,6 @@
 
 .example__wrapper {
   @include container;
-  display: flex;
-  flex-direction: column;
 }
 
 .example__description {
@@ -25,6 +22,7 @@
   font-family: $alternate-font;
   font-size: 14px;
   line-height: 18px;
+  color: #444444;
 }
 
 @media (min-width: $tablet-width) {
@@ -34,16 +32,16 @@
   }
 
   .example__caption {
+    width: auto;
+    margin: 0;
     margin-top: 42px;
     margin-bottom: 64px;
-    padding-left: 30px;
+    padding: 0;
     font-size: 60px;
   }
 
   .example__wrapper {
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-bottom: 250px;
+    padding-bottom: 76px;
   }
 
   .example__description {
@@ -55,11 +53,7 @@
 
 @media (min-width: $desktop-width) {
   .example {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-image: linear-gradient(#ffffff 22%, $accent-color 22%);
+    background-image: linear-gradient(#ffffff 29%, $accent-color 29%);
     border: none;
   }
 
@@ -72,7 +66,8 @@
   .example__caption {
     width: 100%;
     margin: 0;
-    margin-bottom: 70px;
+    margin-top: 57px;
+    margin-bottom: 146px;
     padding: 0;
   }
 
@@ -80,12 +75,10 @@
     width: 570px;
     margin: 0;
     padding: 0;
-    padding-top: 70px;
-    padding-bottom: 70px;
   }
 
   .example__description {
     width: 431px;
-    margin-bottom: 0;
+    margin-bottom: 84px;
   }
 }

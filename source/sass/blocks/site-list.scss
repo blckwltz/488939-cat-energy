@@ -11,7 +11,7 @@
 }
 
 .site-list__item {
-  padding-bottom: 25px;
+  padding-bottom: 27px;
   border-bottom: 2px solid $border-color-alternate-light;
 
   &--no-border {
@@ -34,11 +34,11 @@
 
   .site-list__item {
     width: 324px;
-    min-height: 526px;
+    min-height: 513px;
     margin: 0;
-    margin-bottom: 45px;
+    margin-bottom: 58px;
     padding: 0;
-    background-image: linear-gradient(#ffffff 18%, $accent-color 18%);
+    background-image: linear-gradient(#ffffff 16%, $accent-color 16%);
     border: none;
 
     &--no-border {
@@ -73,7 +73,7 @@
 
   .site-list__item {
     width: 245px;
-    margin-bottom: 48px;
+    margin-bottom: 60px;
 
     &--wide {
       width: 895px;
