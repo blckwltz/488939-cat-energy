@@ -22,6 +22,7 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/before-mobile@2x.png");
+      background-size: 320px auto;
     }
   }
 
@@ -31,6 +32,7 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/after-mobile@2x.png");
+      background-size: 320px auto;
     }
   }
 }
@@ -65,27 +67,34 @@
 
 @media (min-width: $tablet-width) {
   .slider__wrapper {
+    width: 620px;
     margin-top: 0;
     margin-bottom: 22px;
   }
 
   .slider__image {
-    width: 571px;
     height: 513px;
+    margin: 0;
 
     &--before {
+      width: 311px;
       background-image: url("../img/before-tablet@1x.png");
+      background-position: -27px 0;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/before-tablet@2x.png");
+        background-size: 690px auto;
       }
     }
 
     &--after {
+      display: block;
       background-image: url("../img/after-tablet@1x.png");
+      background-position: -338px 0;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/after-tablet@2x.png");
+        background-size: 690px auto;
       }
     }
   }
@@ -132,23 +141,29 @@
   }
 
   .slider__wrapper {
+    width: 571px;
     margin-bottom: 46px;
   }
 
   .slider__image {
     &--before {
+      width: 430px;
       background-image: url("../img/before-desktop@1x.png");
+      background-position: -20px 2px;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/before-desktop@2x.png");
+        background-size: 690px auto;
       }
     }
 
     &--after {
       background-image: url("../img/after-desktop@1x.png");
+      background-position: -365px 2px;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/after-desktop@2x.png");
+        background-size: 690px auto;
       }
     }
   }

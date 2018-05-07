@@ -31,12 +31,14 @@
   &--lose-weight::after {
     @include pseudo-element(-9px, 10px, 35px, 49px);
     background-image: url("../img/icon-cat-slim.svg");
+    background-repeat: no-repeat;
     background-position: center;
   }
 
   &--gain-weight::after {
     @include pseudo-element(6px, -7px, 67px, 28px);
     background-image: url("../img/icon-cat-pro.svg");
+    background-repeat: no-repeat;
     background-position: center;
   }
 }

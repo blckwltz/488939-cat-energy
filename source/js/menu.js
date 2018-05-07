@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 (function () {
   var container = document.querySelector('.page-header__logo-wrapper');

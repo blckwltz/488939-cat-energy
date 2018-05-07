@@ -7,13 +7,16 @@
 
 .features__card {
   width: 122px;
+  height: 54px;
   text-align: center;
+  border: 1px solid #cfcfcf;
+  border-radius: 3px;
 }
 
 .features__caption {
   flex-grow: 1;
   margin: 0;
-  margin-bottom: 9px;
+  margin-top: 14px;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
@@ -21,18 +24,22 @@
 }
 
 .features__description {
-  margin: 0;
-  padding-left: 20px;
-  padding-right: 20px;
+  position: relative;
+  top: 8px;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0 20px;
   font-family: $alternate-font;
   font-size: 12px;
   line-height: 12px;
+  text-transform: lowercase;
   color: #444444;
+  background-color: $accent-color;
 }
 
 .features__cost {
   margin: auto;
-  margin-top: 19px;
+  margin-top: 34px;
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
@@ -44,9 +51,9 @@
   }
 
   .features__card {
-    width: 162px;
+    width: 160px;
+    height: 69px;
     margin-right: 42px;
-    padding-top: 15px;
   }
 
   .features__caption {
@@ -55,10 +62,11 @@
   }
 
   .features__description {
-    padding-left: 10px;
-    padding-right: 10px;
+    top: 3px;
+    padding: 0 7px;
     font-size: 14px;
     line-height: 14px;
+    background-color: #ffffff;
   }
 
   .features__cost {
@@ -86,11 +94,15 @@
     padding-top: 0;
   }
 
+  .features__description {
+    background-color: $accent-color;
+  }
+
   .features__cost {
     flex-direction: row;
     align-self: flex-end;
     width: 325px;
-    margin-top: 56px;
+    margin-top: 60px;
     margin-left: 0;
     text-align: left;
   }

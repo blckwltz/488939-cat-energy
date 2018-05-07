@@ -83,6 +83,8 @@
 @media (min-width: $desktop-width) {
   .page-header__wrapper {
     position: absolute;
+    left: 0;
+    right: 0;
   }
 
   .page-header__logo {

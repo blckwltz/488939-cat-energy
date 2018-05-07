@@ -63,7 +63,7 @@
       }
 
       &::before {
-        @include pseudo-element(36px, 0, 100%, 2px);
+        @include pseudo-element(34px, 1px, 100%, 2px);
         background-color: $main-color;
       }
     }
@@ -77,6 +77,10 @@
   }
 
   .main-nav__link {
+    &--active::before {
+      @include pseudo-element(37px, 1px, 100%, 2px);
+    }
+
     &--white-color {
       color: #ffffff;
 

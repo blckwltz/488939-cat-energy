@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link href="css/normalize.css" type="text/css" rel="stylesheet">
-    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/style.min.css" type="text/css" rel="stylesheet">
   </head>
   <body>
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <div class="page-header__wrapper">
         <div class="page-header__logo-wrapper page-header__logo-wrapper--no-js">
@@ -78,18 +80,18 @@
               <div class="form__fieldset-wrapper form__fieldset-wrapper--wide">
                 <div class="form__fieldset-wrapper form__fieldset-wrapper--horizontal">
                   <label class="form__label" for="email">E-mail:<sup>*</sup></label>
-                  <input class="form__input" type="email" id="email" name="email" required placeholder="kuklachev@gmail.com">
+                  <input class="form__input form__input--email" type="email" id="email" name="email" required placeholder="kuklachev@gmail.com">
+                  <svg class="form__fieldset-icon form__fieldset-icon--email" x="0" y="0" width="17" height="13">
+                    <use xlink:href="#icon-mail"></use>
+                  </svg>
                 </div>
                 <div class="form__fieldset-wrapper form__fieldset-wrapper--horizontal">
                   <label class="form__label" for="phone">Телефон:<sup>*</sup></label>
-                  <input class="form__input" type="tel" id="phone" name="phone" required placeholder="8 (960) 900-60-90">
+                  <input class="form__input form__input--phone" type="tel" id="phone" name="phone" required placeholder="8 (960) 900-60-90">
+                  <svg class="form__fieldset-icon form__fieldset-icon--phone" x="0" y="0" width="20" height="20">
+                    <use xlink:href="#icon-phone"></use>
+                  </svg>
                 </div>
-              </div>
-              <div class="form__fieldset-icon form__fieldset-icon--email">
-                <img src="img/icon-mail.svg" width="17" height="13">
-              </div>
-              <div class="form__fieldset-icon form__fieldset-icon--phone">
-                <img src="img/icon-phone.svg" width="20" height="20">
               </div>
             </fieldset>
           </div>
@@ -97,7 +99,7 @@
             <div class="form__fieldset form__fieldset--comment">
               <h3 class="form__fieldset-caption">Комментарий</h3>
               <div class="form__fieldset-wrapper">
-                <textarea class="form__input form__input--textarea" id="comment" name="comment" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
+                <textarea class="form__input form__input--textarea" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
               </div>
             </div>
           </div>
@@ -143,19 +145,33 @@
         </div>
         <ul class="page-footer__social">
           <li class="page-footer__social-item">
-            <a class="page-footer__social-link page-footer__social-link--vk" href="#">VK</a>
+            <a class="page-footer__social-link page-footer__social-link--vk" href="#">VK
+              <svg class="page-footer__social-image" width="30" height="16" x="0" y="0">
+                <use xlink:href="#icon-vk"></use>
+              </svg>
+            </a>
           </li>
           <li class="page-footer__social-item">
-            <a class="page-footer__social-link page-footer__social-link--instagram" href="#">Instagram</a>
+            <a class="page-footer__social-link page-footer__social-link--instagram" href="#">Instagram
+              <svg class="page-footer__social-image" width="23" height="23" x="0" y="0">
+                <use xlink:href="#icon-insta"></use>
+              </svg>
+            </a>
           </li>
           <li class="page-footer__social-item">
-            <a class="page-footer__social-link page-footer__social-link--facebook" href="#">Facebook</a>
+            <a class="page-footer__social-link page-footer__social-link--facebook" href="#">Facebook
+              <svg class="page-footer__social-image" width="16" height="28" x="0" y="0">
+                <use xlink:href="#icon-fb"></use>
+              </svg>
+            </a>
           </li>
         </ul>
         <div class="page-footer__academy">
           <a class="page-footer__academy-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           <a class="page-footer__academy-logo" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="page-footer__academy-image" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+            <svg class="page-footer__academy-image" width="40" height="40" x="0" y="0">
+              <use xlink:href="#htmlacademy"></use>
+            </svg>
           </a>
         </div>
       </div>

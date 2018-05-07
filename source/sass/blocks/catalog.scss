@@ -25,12 +25,11 @@
 .catalog__toggle {
   position: relative;
   padding-top: 78px;
-  font-family: $main-font;
   font-size: 16px;
   line-height: 20px;
+  text-align: center;
   text-transform: uppercase;
   background-color: #ffffff;
-  border: none;
 
   &::before {
     @include pseudo-element(25px, 50%, 30px, 30px);
