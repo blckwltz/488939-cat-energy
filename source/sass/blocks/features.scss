@@ -27,8 +27,8 @@
   position: relative;
   top: 8px;
   display: inline-block;
+  width: 80px;
   margin: 0 auto;
-  padding: 0 20px;
   font-family: $alternate-font;
   font-size: 12px;
   line-height: 12px;
@@ -63,6 +63,7 @@
 
   .features__description {
     top: 3px;
+    width: auto;
     padding: 0 7px;
     font-size: 14px;
     line-height: 14px;

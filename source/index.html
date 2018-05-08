@@ -4,7 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
     <link href="css/style.min.css" type="text/css" rel="stylesheet">
+    <script src="js/picturefill.min.js" type="text/javascript" defer></script>
   </head>
   <body>
     <div style="display: none">
@@ -20,7 +23,7 @@
               <img class="page-header__logo-image" src="img/logo-mobile.svg" width="192" height="38" alt="CAT ENERGY">
             </picture>
           </a>
-          <button class="page-header__menu-toggle page-header__menu-toggle--no-js" type="button"></button>
+          <button class="page-header__menu-toggle page-header__menu-toggle--no-js" type="button">Открыть меню</button>
         </div>
         <nav class="main-nav main-nav--closed">
           <ul class="main-nav__list">
@@ -39,9 +42,11 @@
     </header>
     <main class="page-main">
       <section class="product">
-        <h1 class="product__caption">Функциональное питание для котов</h1>
-        <p class="product__slogan">Занялся собой? Займись котом!</p>
-        <a class="button product__button" href="form.html">Подобрать программу</a>
+        <div class="product__wrapper">
+          <h1 class="product__caption">Функциональное питание для котов</h1>
+          <p class="product__slogan">Занялся собой? Займись котом!</p>
+          <a class="button product__button" href="form.html">Подобрать программу</a>
+        </div>
       </section>
       <div class="programs">
         <section class="programs__card">
@@ -77,7 +82,7 @@
           </li>
           <li class="advantages__item advantages__item--clock">
             <p class="advantages__description">Уже через месяц наслаждайтесь
-            изменениями к лучшему вашего питомца!</p>
+            изменениями к лучшему<br>вашего питомца!</p>
             <span class="advantages__number">4</span>
           </li>
         </ul>
@@ -129,7 +134,7 @@
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
           <a class="page-footer__logo-link">
-            <img class="page-footer__logo-image" src="img/logo-footer.svg" width="128" height="24">
+            <img class="page-footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="CAT ENERGY">
           </a>
         </div>
         <ul class="page-footer__social">
@@ -157,7 +162,7 @@
         </ul>
         <div class="page-footer__academy">
           <a class="page-footer__academy-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          <a class="page-footer__academy-logo" href="https://htmlacademy.ru/intensive/adaptive">
+          <a class="page-footer__academy-logo" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
             <svg class="page-footer__academy-image" width="40" height="40" x="0" y="0">
               <use xlink:href="#htmlacademy"></use>
             </svg>
@@ -166,7 +171,7 @@
       </div>
     </footer>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-    <script src="js/menu.js" type="text/javascript"></script>
-    <script src="js/map.js" type="text/javascript"></script>
+    <script src="js/menu.min.js" type="text/javascript"></script>
+    <script src="js/map.min.js" type="text/javascript"></script>
   </body>
 </html>

@@ -66,11 +66,13 @@
   &::before {
     @include pseudo-element(21px, 97px, 24px, 11px);
     background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
     background-position: center;
   }
 
   &:hover {
     &::before {
+      @include pseudo-element(21px, 97px, 33px, 11px);
       background-image: url("../img/icon-right-arrow-verylong.svg");
     }
   }
@@ -127,6 +129,12 @@
     &::before {
       @include pseudo-element(23px, 165px, 24px, 11px);
     }
+
+    &:hover {
+      &::before {
+        @include pseudo-element(23px, 165px, 33px, 11px);
+      }
+    }
   }
 }
 
@@ -169,5 +177,15 @@
 
   .programs__link {
     padding-left: 0;
+
+    &::before {
+      @include pseudo-element(21px, 132px, 24px, 11px);
+    }
+
+    &:hover {
+      &::before {
+        @include pseudo-element(21px, 132px, 33px, 11px);
+      }
+    }
   }
 }

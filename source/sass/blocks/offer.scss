@@ -45,6 +45,17 @@
       background-size: 708px auto;
     }
   }
+
+  .offer__description {
+    padding-top: 72px;
+    padding-left: 394px;
+    padding-right: 153px;
+    padding-bottom: 0;
+
+    &::before {
+      @include pseudo-element(65px, 62px, 56px, 60px);
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -59,6 +70,17 @@
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/gift-photo-desktop@2x.jpg");
       background-size: 245px auto;
+    }
+  }
+
+  .offer__description {
+    padding-top: 185px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 44px;
+
+    &::before {
+      @include pseudo-element(65px, 93px, 56px, 60px);
     }
   }
 }

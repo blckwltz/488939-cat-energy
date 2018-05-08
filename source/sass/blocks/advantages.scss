@@ -117,6 +117,7 @@
   .advantages__description {
     position: relative;
     z-index: 2;
+    padding-right: 60px;
     font-size: 16px;
     line-height: 24px;
   }
@@ -149,5 +150,9 @@
     &--clock {
       margin: 0;
     }
+  }
+
+  .advantages__description {
+    padding: 0;
   }
 }
