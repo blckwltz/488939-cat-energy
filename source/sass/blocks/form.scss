@@ -6,10 +6,14 @@
 .form__fieldset {
   margin: 0;
   padding: 0;
-  border: none;
+  border-top: 3px solid $main-color;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
 
   &--info {
     margin-bottom: 10px;
+    border: none;
   }
 
   &--programs {
@@ -70,6 +74,7 @@
 
 .form__fieldset-caption {
   @include container;
+  position: relative;
   padding: 0;
   padding-top: 30px;
   padding-bottom: 30px;

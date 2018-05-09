@@ -5,7 +5,7 @@
 
   ymaps.ready(function () {
     map = new ymaps.Map(document.querySelector('.contacts__map'), {
-      center: [59.938896, 30.323398],
+      center: [59.938637, 30.323017],
       zoom: 17
     });
 

@@ -8,6 +8,8 @@
     <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
     <link href="css/style.min.css" type="text/css" rel="stylesheet">
     <script src="js/picturefill.min.js" type="text/javascript" defer></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript" defer></script>
+    <script src="js/map.min.js" type="text/javascript" defer></script>
   </head>
   <body>
     <div style="display: none">
@@ -99,12 +101,12 @@
             </fieldset>
           </div>
           <div class="form__wrapper">
-            <div class="form__fieldset form__fieldset--comment">
-              <h3 class="form__fieldset-caption">Комментарий</h3>
+            <fieldset class="form__fieldset form__fieldset--comment">
+              <legend class="form__fieldset-caption">Комментарий</legend>
               <div class="form__fieldset-wrapper">
                 <textarea class="form__input form__input--textarea" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
               </div>
-            </div>
+            </fieldset>
           </div>
           <div class="form__wrapper">
             <fieldset class="form__fieldset form__fieldset--extras">
@@ -179,8 +181,6 @@
         </div>
       </div>
     </footer>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-    <script src="js/menu.min.js"></script>
-    <script src="js/map.min.js" type="text/javascript"></script>
+    <script src="js/menu.min.js" type="text/javascript"></script>
   </body>
 </html>

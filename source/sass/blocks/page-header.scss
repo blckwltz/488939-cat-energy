@@ -31,6 +31,7 @@
   height: 18px;
   margin-top: 22px;
   font-size: 0;
+  background-color: transparent;
   background-image: url("../img/icon-mobile-menu.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -48,6 +49,7 @@
 
   .page-header__wrapper {
     @include container;
+    margin-top: 24px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -86,6 +88,7 @@
     position: absolute;
     left: 0;
     right: 0;
+    margin-top: 54px;
   }
 
   .page-header__logo {
