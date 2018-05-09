@@ -48,27 +48,27 @@
           <h1 class="program-choice__caption">Подбор программы</h1>
           <p class="program-choice__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
         </div>
-        <form class="program-choice__form form" method="post" action="https://echo.htmlacademy.ru">
+        <form class="form" method="post" action="https://echo.htmlacademy.ru">
           <div class="form__wrapper">
             <fieldset class="form__fieldset form__fieldset--info">
-              <div class="form__fieldset-wrapper">
-                <div class="form__fieldset-wrapper form__fieldset-wrapper--horizontal">
+              <div class="form__fieldset-wrapper form__fieldset-wrapper--narrow">
+                <div class="form__input-wrapper">
                   <label class="form__label" for="name">Имя:<sup>*</sup></label>
                   <input class="form__input" type="text" id="name" name="name" required placeholder="Барсик">
                 </div>
-                <div class="form__fieldset-wrapper form__fieldset-wrapper--horizontal">
+                <div class="form__input-wrapper">
                   <label class="form__label" for="weight">Вес (кг):<sup>*</sup></label>
                   <input class="form__input" type="text" id="weight" name="weight" required placeholder="7">
                 </div>
-                <div class="form__fieldset-wrapper form__fieldset-wrapper--horizontal">
+                <div class="form__input-wrapper">
                   <label class="form__label" for="age">Возраст (лет):</label>
                   <input class="form__input" type="text" id="age" name="age" placeholder="7">
                 </div>
               </div>
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--programs">
-              <div class="form__fieldset-wrapper form__fieldset-wrapper--border">
-                <div class="form__fieldset-wrapper">
+              <div class="form__fieldset-wrapper form__fieldset-wrapper--narrow form__fieldset-wrapper--border">
+                <div class="form__input-wrapper form__input-wrapper--radio">
                   <input class="form__input form__input--radio visuallyhidden" type="radio" id="lose-weight"                                          name="program" value="lose-weight" checked>
                   <label class="form__label form__label--radio" for="lose-weight">Похудение</label>
                   <input class="form__input form__input--radio visuallyhidden" type="radio" id="gain-weight"                                          name="program" value="gain-weight">
@@ -79,55 +79,49 @@
               </div>
             </fieldset>
           </div>
-          <div class="form__wrapper">
-            <fieldset class="form__fieldset form__fieldset--contacts">
-              <legend class="form__fieldset-caption">Контактные данные (владельца кота)</legend>
-              <div class="form__fieldset-wrapper form__fieldset-wrapper--wide">
-                <div class="form__fieldset-wrapper form__fieldset-wrapper--horizontal">
-                  <label class="form__label" for="email">E-mail:<sup>*</sup></label>
-                  <input class="form__input form__input--email" type="email" id="email" name="email" required placeholder="kuklachev@gmail.com">
-                  <svg class="form__fieldset-icon form__fieldset-icon--email" x="0" y="0" width="17" height="13">
+          <fieldset class="form__fieldset form__fieldset--contacts">
+            <legend class="form__fieldset-caption">Контактные данные (владельца кота)</legend>
+            <div class="form__fieldset-wrapper form__fieldset-wrapper--horizontal">
+              <div class="form__input-wrapper">
+                <label class="form__label" for="email">E-mail:<sup>*</sup></label>
+                <input class="form__input form__input--email" type="email" id="email" name="email" required placeholder="kuklachev@gmail.com">
+                <svg class="form__input-icon form__input-icon--email" x="0" y="0" width="17" height="13">
                     <use xlink:href="#icon-mail"></use>
-                  </svg>
-                </div>
-                <div class="form__fieldset-wrapper form__fieldset-wrapper--horizontal">
-                  <label class="form__label" for="phone">Телефон:<sup>*</sup></label>
-                  <input class="form__input form__input--phone" type="tel" id="phone" name="phone" required placeholder="8 (960) 900-60-90">
-                  <svg class="form__fieldset-icon form__fieldset-icon--phone" x="0" y="0" width="20" height="20">
+                </svg>
+              </div>
+              <div class="form__input-wrapper">
+                <label class="form__label" for="phone">Телефон:<sup>*</sup></label>
+                <input class="form__input form__input--phone" type="tel" id="phone" name="phone" required placeholder="8 (960) 900-60-90">
+                <svg class="form__input-icon form__input-icon--phone" x="0" y="0" width="20" height="20">
                     <use xlink:href="#icon-phone"></use>
-                  </svg>
-                </div>
+                </svg>
               </div>
-            </fieldset>
-          </div>
-          <div class="form__wrapper">
-            <fieldset class="form__fieldset form__fieldset--comment">
-              <legend class="form__fieldset-caption">Комментарий</legend>
-              <div class="form__fieldset-wrapper">
-                <textarea class="form__input form__input--textarea" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
+          </fieldset>
+          <fieldset class="form__fieldset form__fieldset--comment">
+            <legend class="form__fieldset-caption">Комментарий</legend>
+            <div class="form__fieldset-wrapper">
+              <textarea class="form__input form__input--textarea" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
+          </fieldset>
+          <fieldset class="form__fieldset form__fieldset--extras">
+            <legend class="form__fieldset-caption form__fieldset-caption--extras">Дополнительно</legend>
+            <div class="form__fieldset-wrapper form__fieldset-wrapper--extras">
+              <div class="form__input-wrapper form__input-wrapper--checkbox">
+                <input class="form__input form__input--checkbox visuallyhidden" type="checkbox" id="sugar" name="sugar" value="sugar" checked>
+                <label class="form__label form__label--checkbox" for="sugar">Сахарозаменитель</label>
+                <input class="form__input form__input--checkbox visuallyhidden" type="checkbox" id="water" name="water" value="water">
+                <label class="form__label form__label--checkbox" for="water">Питьевая вода</label>
               </div>
-            </fieldset>
-          </div>
-          <div class="form__wrapper">
-            <fieldset class="form__fieldset form__fieldset--extras">
-              <legend class="form__fieldset-caption form__fieldset-caption--extras">Дополнительно</legend>
-              <div class="form__fieldset-wrapper form__fieldset-wrapper--parallel">
-                <div class="form__fieldset-wrapper form__fieldset-wrapper--narrow">
-                  <input class="form__input form__input--checkbox visuallyhidden" type="checkbox" id="sugar" name="sugar" value="sugar" checked>
-                  <label class="form__label form__label--checkbox" for="sugar">Сахарозаменитель</label>
-                  <input class="form__input form__input--checkbox visuallyhidden" type="checkbox" id="water" name="water" value="water">
-                  <label class="form__label form__label--checkbox" for="water">Питьевая вода</label>
-                </div>
-                <div class="form__fieldset-wrapper form__fieldset-wrapper--narrow">
-                  <input class="form__input form__input--checkbox visuallyhidden" type="checkbox" id="milk" name="milk" value="milk">
-                  <label class="form__label form__label--checkbox"  for="milk">Молоко</label>
-                  <input class="form__input form__input--checkbox visuallyhidden" type="checkbox" id="vitamin" name="vitamin" value="vitamin">
-                  <label class="form__label form__label--checkbox"  for="vitamin">Витамины</label>
-                </div>
+              <div class="form__input-wrapper form__input-wrapper--checkbox">
+                <input class="form__input form__input--checkbox visuallyhidden" type="checkbox" id="milk" name="milk" value="milk">
+                <label class="form__label form__label--checkbox"  for="milk">Молоко</label>
+                <input class="form__input form__input--checkbox visuallyhidden" type="checkbox" id="vitamin" name="vitamin" value="vitamin">
+                <label class="form__label form__label--checkbox"  for="vitamin">Витамины</label>
               </div>
-            </fieldset>
-          </div>
-          <div class="form__wrapper form__wrapper--narrow">
+            </div>
+          </fieldset>
+          <div class="form__button-wrapper">
             <button class="button form__button" type="submit">Отправить заявку</button>
             <p class="form__requirement"><sup>*</sup> — Обязательные поля</p>
           </div>

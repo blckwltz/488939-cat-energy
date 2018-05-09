@@ -6,81 +6,79 @@
 .form__fieldset {
   margin: 0;
   padding: 0;
-  border-top: 3px solid $main-color;
-  border-left: none;
-  border-right: none;
-  border-bottom: none;
+  border: none;
 
   &--info {
-    margin-bottom: 10px;
-    border: none;
+    padding-top: 38px;
   }
 
   &--programs {
-    margin-top: 24px;
-  }
-}
-
-.form__fieldset-wrapper {
-  @include container;
-  display: flex;
-  flex-direction: column;
-
-  &--horizontal {
-    position: relative;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: auto;
-    margin: 0;
-    margin-bottom: 14px;
-    padding: 0;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+    margin-bottom: 21px;
   }
 
-  &--border {
-    width: auto;
-    margin: 0;
-    padding: 0;
-    padding-top: 25px;
-    padding-bottom: 4px;
-    border-top: 2px solid $border-color-alternate-light;
-    border-bottom: 2px solid $border-color-alternate-light;
+  &--contacts {
+    margin-bottom: 32px;
+    padding-top: 42px;
+    border-top: 3px solid $main-color;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
   }
 
-  &--narrow {
-    width: auto;
-    margin: 0;
-    padding: 0;
-  }
-}
-
-.form__fieldset-icon {
-  position: absolute;
-
-  &--email {
-    top: 15px;
-    right: 16px;
+  &--comment {
+    margin-bottom: 26px;
+    padding-top: 32px;
+    border-top: 3px solid $main-color;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
   }
 
-  &--phone {
-    top: 12px;
-    right: 13px;
+  &--extras {
+    margin-bottom: 0;
+    padding-top: 28px;
+    border-top: 3px solid $main-color;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
   }
 }
 
 .form__fieldset-caption {
-  @include container;
   position: relative;
-  padding: 0;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-left: 60px;
+  padding-right: 22px;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
+}
+
+.form__fieldset-wrapper {
+  @include container;
+
+  &--border {
+    margin-top: 24px;
+    padding-top: 28px;
+    border: 1px solid $border-color-alternate-light;
+  }
+}
+
+.form__input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--radio,
+  &--checkbox {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
 }
 
 .form__label {
@@ -191,7 +189,9 @@
   }
 
   &--textarea {
-    min-height: 126px;
+    width: 100%;
+    min-height: 150px;
+    box-sizing: border-box;
     resize: none;
   }
 
@@ -204,14 +204,26 @@
   }
 }
 
-.form__input:focus + .form__fieldset-icon {
+.form__input:focus + .form__input-icon {
   fill: $main-color;
 }
 
-.form__wrapper {
-  &--narrow {
-    @include container;
+.form__input-icon {
+  position: absolute;
+
+  &--email {
+    top: 15px;
+    right: 16px;
   }
+
+  &--phone {
+    top: 12px;
+    right: 13px;
+  }
+}
+
+.form__button-wrapper {
+  @include container;
 }
 
 .form__button {
@@ -238,98 +250,76 @@
 
 @media (min-width: $tablet-width) {
   .form__fieldset {
-    width: 630px;
-    margin-left: 12px;
-
     &--info {
-      margin-bottom: 72px;
+      margin-top: 24px;
+      margin-bottom: 50px;
     }
 
     &--programs {
-      margin-top: 0;
-      margin-bottom: 76px;
-      padding-top: 32px;
-      border: 2px solid $border-color-alternate-light;
+      margin-bottom: 81px;
     }
 
     &--contacts {
-      margin-bottom: 64px;
+      margin-bottom: 71px;
+      padding-top: 66px;
     }
 
     &--comment {
-      margin-bottom: 72px;
-    }
-  }
-
-  .form__fieldset-wrapper {
-    width: auto;
-    margin: 0;
-    padding: 0;
-
-    &--horizontal {
-      width: 100%;
-      margin-bottom: 14px;
-      border: none;
+      margin-bottom: 65px;
+      padding-top: 71px;
     }
 
-    &--border {
-      padding: 0;
-      border: none;
-    }
-
-    &--parallel {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-
-    &--narrow {
-      flex-direction: row;
-      justify-content: space-between;
-      width: 546px;
-    }
-  }
-
-  .form__fieldset-icon {
-    &--email {
-      top: 22px;
-      right: 19px;
-    }
-
-    &--phone {
-      top: 19px;
-      right: 16px;
+    &--extras {
+      padding-top: 61px;
     }
   }
 
   .form__fieldset-caption {
-    width: auto;
-    margin: 0;
-    margin-bottom: 74px;
-    padding: 0;
+    top: -5px;
+    margin-left: 127px;
+    padding-left: 40px;
+    padding-right: 42px;
     font-size: 36px;
     line-height: 36px;
+  }
+
+  .form__fieldset-wrapper {
+    width: 630px;
+
+    &--border {
+      box-sizing: border-box;
+      padding-top: 34px;
+    }
 
     &--extras {
-      margin-bottom: 66px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .form__input-wrapper {
+    &--checkbox {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 555px;
     }
   }
 
   .form__label {
+    margin-right: 22px;
     font-size: 20px;
     line-height: 20px;
 
     &--radio {
-      margin-left: 40px;
+      margin-left: 12px;
       margin-bottom: 33px;
 
       &::before {
-        @include pseudo-element(-10px, -15px, 40px, 40px);
+        @include pseudo-element(-11px, -13px, 40px, 40px);
       }
 
       &::after {
-        @include pseudo-element(2px, -3px, 18px, 18px);
+        @include pseudo-element(1px, -1px, 18px, 18px);
         display: none;
       }
     }
@@ -359,20 +349,26 @@
     line-height: 20px;
 
     &--textarea {
-      min-height: 141px;
+      min-height: 174px;
     }
   }
 
-  .form__wrapper {
-    @include container;
-
-    &--narrow {
-      display: flex;
-      align-items: center;
-      width: 623px;
-      margin-bottom: 60px;
-      padding: 0;
+  .form__input-icon {
+    &--email {
+      top: 21px;
     }
+
+    &--phone {
+      top: 17px;
+    }
+  }
+
+  .form__button-wrapper {
+    display: flex;
+    align-items: center;
+    width: 623px;
+    margin-bottom: 60px;
+    padding: 0;
   }
 
   .form__button {
@@ -394,107 +390,88 @@
 }
 
 @media (min-width: $desktop-width) {
-  .form__fieldset {
-    width: 570px;
-    margin-left: 0;
+  .form__wrapper {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 62px;
+    margin-bottom: 74px;
+  }
 
+  .form__fieldset {
     &--info {
-      margin-bottom: 67px;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
     }
 
     &--programs {
-      margin-bottom: 67px;
-      padding-top: 35px;
-    }
-
-    &--contacts {
-      width: 100%;
-      margin-bottom: 54px;
-
-      & .form__fieldset-wrapper--horizontal {
-        margin-bottom: 14px;
-      }
+      margin-bottom: 0;
     }
 
     &--comment {
-      width: 100%;
-      margin-bottom: 79px;
+      margin-bottom: 68px;
     }
 
     &--extras {
-      width: 100%;
-      margin-bottom: 3px;
-    }
-  }
-
-  .form__fieldset-wrapper {
-    &--horizontal {
-      width: 570px;
-    }
-
-    &--border {
-      width: 570px;
-      margin: 0;
-      padding: 0;
-    }
-
-    &--wide {
-      flex-direction: row;
-      justify-content: space-between;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-    }
-
-    &--parallel {
-      justify-content: flex-start;
-    }
-
-    &--narrow {
-      flex-direction: row;
-      justify-content: space-between;
-      width: 526px;
-
-      &:first-child {
-        margin-right: 125px;
-      }
-    }
-  }
-
-  .form__fieldset-icon {
-    &--email {
-      top: 21px;
-      right: 20px;
-    }
-
-    &--phone {
-      top: 18px;
-      right: 19px;
+      margin-bottom: 7px;
     }
   }
 
   .form__fieldset-caption {
-    margin-bottom: 70px;
+    margin-left: 0;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
-  .form__label--radio {
-    margin-left: 43px;
-  }
-
-  .form__wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: auto;
-    margin: 0;
-    padding: 0;
+  .form__fieldset-wrapper {
+    width: 1220px;
 
     &--narrow {
-      width: 830px;
-      margin-bottom: 70px;
+      width: 570px;
+      margin: 0;
+      padding: 0;
+    }
+
+    &--border {
+      margin-top: 0;
+      padding-top: 36px;
+    }
+
+    &--horizontal {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & .form__input-wrapper {
+        margin-bottom: 0;
+      }
+    }
+
+    &--extras {
+      justify-content: space-between;
     }
   }
 
+  .form__input-wrapper {
+    width: 570px;
+  }
+
+  .form__label {
+    &--radio {
+      margin-left: 39px;
+    }
+  }
+
+  .form__button-wrapper {
+    display: flex;
+    width: 1220px;
+    margin-bottom: 70px;
+    padding: 0 40px;
+  }
+
   .form__button {
+    margin-right: 82px;
     padding-left: 208px;
     padding-right: 208px;
   }
