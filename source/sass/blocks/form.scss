@@ -51,6 +51,11 @@
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
+
+  &--contacts {
+    top: 10px;
+    width: 181px;
+  }
 }
 
 .form__fieldset-wrapper {
@@ -281,6 +286,11 @@
     padding-right: 42px;
     font-size: 36px;
     line-height: 36px;
+
+    &--contacts {
+      top: -5px;
+      width: auto;
+    }
   }
 
   .form__fieldset-wrapper {
