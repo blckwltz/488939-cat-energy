@@ -457,14 +457,18 @@
         margin-bottom: 0;
       }
     }
-
-    &--extras {
-      justify-content: space-between;
-    }
   }
 
   .form__input-wrapper {
     width: 570px;
+
+    &--checkbox {
+      width: 533px;
+
+      &:first-child {
+        margin-right: 118px;
+      }
+    }
   }
 
   .form__label {
