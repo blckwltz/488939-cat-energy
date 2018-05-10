@@ -4,67 +4,54 @@
 }
 
 .form__fieldset {
-  margin: 0;
-  padding: 0;
+  @include container;
   border: none;
 
   &--info {
+    margin-bottom: 24px;
     padding-top: 38px;
   }
 
   &--programs {
     margin-bottom: 21px;
+    padding-top: 28px;
+    border: 1px solid $border-color-alternate-light;
   }
 
   &--contacts {
     margin-bottom: 32px;
     padding-top: 42px;
-    border-top: 3px solid $main-color;
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
   }
 
   &--comment {
     margin-bottom: 26px;
     padding-top: 32px;
-    border-top: 3px solid $main-color;
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
   }
 
   &--extras {
     margin-bottom: 0;
     padding-top: 28px;
-    border-top: 3px solid $main-color;
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
   }
 }
 
 .form__fieldset-caption {
   position: relative;
-  padding-left: 60px;
+  padding-left: 0;
   padding-right: 22px;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
+  background-color: #ffffff;
 
   &--contacts {
     top: 10px;
     width: 181px;
   }
-}
 
-.form__fieldset-wrapper {
-  @include container;
-
-  &--border {
-    margin-top: 24px;
-    padding-top: 28px;
-    border: 1px solid $border-color-alternate-light;
+  &::before {
+    @include pseudo-element(12px, 0, 100vw, 3px);
+    z-index: -1;
+    background-color: $main-color;
   }
 }
 
@@ -255,13 +242,17 @@
 
 @media (min-width: $tablet-width) {
   .form__fieldset {
+    width: 630px;
+
     &--info {
       margin-top: 24px;
-      margin-bottom: 50px;
+      margin-bottom: 74px;
     }
 
     &--programs {
-      margin-bottom: 81px;
+      box-sizing: border-box;
+      margin-bottom: 80px;
+      padding-top: 34px;
     }
 
     &--contacts {
@@ -281,11 +272,13 @@
 
   .form__fieldset-caption {
     top: -5px;
-    margin-left: 127px;
-    padding-left: 40px;
-    padding-right: 42px;
+    padding-right: 44px;
     font-size: 36px;
     line-height: 36px;
+
+    &::before {
+      @include pseudo-element(23px, 0, 100vw, 3px);
+    }
 
     &--contacts {
       top: -5px;
@@ -294,13 +287,6 @@
   }
 
   .form__fieldset-wrapper {
-    width: 630px;
-
-    &--border {
-      box-sizing: border-box;
-      padding-top: 34px;
-    }
-
     &--extras {
       display: flex;
       flex-wrap: wrap;
@@ -409,14 +395,13 @@
   }
 
   .form__fieldset {
-    &--info {
-      margin-top: 0;
-      margin-bottom: 0;
-      padding-top: 0;
-    }
+    width: 1220px;
 
+    &--info,
     &--programs {
-      margin-bottom: 0;
+      width: 570px;
+      margin: 0;
+      padding: 0;
     }
 
     &--comment {
@@ -429,25 +414,10 @@
   }
 
   .form__fieldset-caption {
-    margin-left: 0;
-    padding-left: 40px;
     padding-right: 40px;
   }
 
   .form__fieldset-wrapper {
-    width: 1220px;
-
-    &--narrow {
-      width: 570px;
-      margin: 0;
-      padding: 0;
-    }
-
-    &--border {
-      margin-top: 0;
-      padding-top: 36px;
-    }
-
     &--horizontal {
       display: flex;
       justify-content: space-between;
@@ -461,6 +431,10 @@
 
   .form__input-wrapper {
     width: 570px;
+
+    &--radio {
+      padding-top: 36px;
+    }
 
     &--checkbox {
       width: 533px;
