@@ -5,6 +5,7 @@
 
 .form__fieldset {
   @include container;
+  position: relative;
   border: none;
 
   &--info {
@@ -21,16 +22,31 @@
   &--contacts {
     margin-bottom: 32px;
     padding-top: 42px;
+
+    &::before {
+      @include pseudo-element(23px, 20px, 100vw, 3px);
+      background-color: $main-color;
+    }
   }
 
   &--comment {
     margin-bottom: 26px;
     padding-top: 32px;
+
+    &::before {
+      @include pseudo-element(11px, 20px, 100vw, 3px);
+      background-color: $main-color;
+    }
   }
 
   &--extras {
     margin-bottom: 0;
     padding-top: 28px;
+
+    &::before {
+      @include pseudo-element(11px, 20px, 100vw, 3px);
+      background-color: $main-color;
+    }
   }
 }
 
@@ -46,12 +62,6 @@
   &--contacts {
     top: 10px;
     width: 181px;
-  }
-
-  &::before {
-    @include pseudo-element(12px, 0, 100vw, 3px);
-    z-index: -1;
-    background-color: $main-color;
   }
 }
 
@@ -258,27 +268,43 @@
     &--contacts {
       margin-bottom: 71px;
       padding-top: 66px;
+
+      &::before {
+        top: 18px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
 
     &--comment {
       margin-bottom: 65px;
       padding-top: 71px;
+
+      &::before {
+        top: 18px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
 
     &--extras {
       padding-top: 61px;
+
+      &::before {
+        top: 18px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
 
   .form__fieldset-caption {
     top: -5px;
-    padding-right: 44px;
+    left: -40px;
+    padding-left: 40px;
+    padding-right: 40px;
     font-size: 36px;
     line-height: 36px;
-
-    &::before {
-      @include pseudo-element(23px, 0, 100vw, 3px);
-    }
 
     &--contacts {
       top: -5px;
