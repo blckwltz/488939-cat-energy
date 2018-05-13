@@ -113,7 +113,7 @@
   .slider__controls {
     position: absolute;
     left: 50%;
-    bottom: 39px;
+    bottom: 75px;
     width: 568px;
     margin-bottom: 0;
     transform: translateX(-50%);
@@ -153,13 +153,14 @@
 @media (min-width: $desktop-width) {
   .slider {
     position: absolute;
-    top: 190px;
-    right: 0;
+    top: 0;
+    right: -21px;
     width: 610px;
   }
 
   .slider__inner {
     min-height: 464px;
+    background-image: none;
   }
 
   .slider__wrapper {

@@ -54,9 +54,8 @@
 
 @media (min-width: $desktop-width) {
   .example {
-    position: relative;
-    min-height: 654px;
-    background-image: linear-gradient(#ffffff 29%, $accent-color 29%);
+    min-height: 462px;
+    background-image: linear-gradient(90deg, $accent-color 75%, #eaeaea 75%);
     border: none;
   }
 
@@ -64,13 +63,21 @@
     @include container;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 191px;
+  }
+
+  .example__inner {
+    position: relative;
+    width: 100%;
+    padding-bottom: 46px;
   }
 
   .example__caption {
+    position: absolute;
+    top: -134px;
+    left: 0;
     width: 100%;
     margin: 0;
-    margin-top: 57px;
-    margin-bottom: 146px;
     padding: 0;
   }
 
@@ -82,6 +89,7 @@
 
   .example__description {
     width: 431px;
+    margin-top: 72px;
     margin-bottom: 68px;
   }
 }
