@@ -54,7 +54,7 @@
 
 @media (min-width: $desktop-width) {
   .example {
-    min-height: 462px;
+    min-height: 464px;
     background-image: linear-gradient(90deg, $accent-color 75%, #eaeaea 75%);
     border: none;
   }
@@ -63,7 +63,6 @@
     @include container;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 191px;
   }
 
   .example__inner {

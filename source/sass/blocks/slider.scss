@@ -156,6 +156,7 @@
     top: 0;
     right: -21px;
     width: 610px;
+    background-image: linear-gradient(90deg, $accent-color 50%, #eaeaea 50%);
   }
 
   .slider__inner {
@@ -164,9 +165,11 @@
   }
 
   .slider__wrapper {
-    top: -225px;
+    top: -191px;
     left: -41px;
+    align-items: flex-end;
     width: 571px;
+    margin: 0;
     transform: none;
   }
 
