@@ -10,6 +10,8 @@
 
     button.classList.remove('page-header__menu-toggle--no-js');
 
+    menu.classList.add('main-nav--closed');
+
     button.addEventListener('click', function () {
       menu.classList.toggle('main-nav--closed');
 

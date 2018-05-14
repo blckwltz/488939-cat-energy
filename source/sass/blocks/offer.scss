@@ -1,5 +1,9 @@
 .offer {
   @include container;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 289px;
   margin-top: 40px;
   margin-bottom: 35px;
   box-sizing: border-box;
@@ -15,10 +19,7 @@
 .offer__description {
   position: relative;
   margin: 0;
-  padding-top: 185px;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 44px;
+  margin-bottom: 44px;
   font-family: $alternate-font;
   font-size: 16px;
   line-height: 20px;
@@ -26,15 +27,19 @@
   color: #ffffff;
 
   &::before {
-    @include pseudo-element(65px, 93px, 56px, 60px);
+    @include pseudo-element(-121px, 50%, 56px, 60px);
     background-image: url("../img/icon-gift.svg");
     background-position: center;
+    transform: translateX(-50%);
   }
 }
 
 @media (min-width: $tablet-width) {
   .offer {
-    height: 200px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 200px;
     margin-top: 70px;
     margin-bottom: 76px;
 
@@ -47,21 +52,23 @@
   }
 
   .offer__description {
-    padding-top: 72px;
-    padding-left: 394px;
-    padding-right: 153px;
-    padding-bottom: 0;
+    width: 101px;
+    margin-bottom: 0;
+    margin-right: 153px;
 
     &::before {
-      @include pseudo-element(65px, 62px, 56px, 60px);
+      top: -5px;
+      left: -332px;
+      transform: none;
     }
   }
 }
 
 @media (min-width: $desktop-width) {
   .offer {
+    flex-direction: column;
     width: 245px;
-    height: 290px;
+    min-height: 290px;
     margin: 0;
     padding: 0;
 
@@ -74,13 +81,14 @@
   }
 
   .offer__description {
-    padding-top: 185px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 44px;
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 44px;
 
     &::before {
-      @include pseudo-element(65px, 93px, 56px, 60px);
+      top: -120px;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 }

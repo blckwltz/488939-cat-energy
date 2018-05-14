@@ -70,6 +70,7 @@
 .form__input-wrapper {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 14px;
 
@@ -100,6 +101,7 @@
 
     &::before {
       @include pseudo-element(-6px, 0, 28px, 28px);
+      tab-index: 0;
       border: 1px solid #cfcfcf;
       border-radius: 50%;
     }
@@ -139,6 +141,7 @@
     cursor: pointer;
 
     &::before {
+      tab-index: 0;
       @include pseudo-element(-6px, 0, 28px, 28px);
       border: 1px solid #cfcfcf;
     }
@@ -184,6 +187,10 @@
   color: #444444;
   border: 1px solid $border-color;
 
+  &--error {
+    border: 1px solid #ff8282;
+  }
+
   &--radio:checked + label::after {
     display: block;
   }
@@ -203,9 +210,14 @@
     border: 1px solid #cdcdcd;
   }
 
+  &:active,
   &:focus {
     border: 1px solid #444444;
   }
+}
+
+.form__input--error + .form__input-icon {
+  fill: #ff8282;
 }
 
 .form__input:focus + .form__input-icon {
@@ -448,6 +460,7 @@
   .form__fieldset-wrapper {
     &--horizontal {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
 
