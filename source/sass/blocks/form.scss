@@ -142,6 +142,7 @@
 
     &::before {
       tab-index: 0;
+
       @include pseudo-element(-6px, 0, 28px, 28px);
       border: 1px solid #cfcfcf;
     }
