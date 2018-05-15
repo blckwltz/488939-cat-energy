@@ -2,38 +2,3 @@
   display: flex;
   flex-direction: column;
 }
-
-.page-main__wrapper {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-
-  &::before {
-    @include pseudo-element(41px, 0, 100vw, 3px);
-    background-color: $main-color;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .page-main__wrapper {
-    &::before {
-      top: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .page-main__wrapper {
-    @include container;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 85px;
-
-    &::before {
-      top: 35px;
-    }
-  }
-}

@@ -5,6 +5,11 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 0;
+
+  &::before {
+    @include pseudo-element(41px, 0, 100vw, 3px);
+    background-color: $main-color;
+  }
 }
 
 .extras__caption {
@@ -25,12 +30,17 @@
   padding: 0;
 }
 
+.extras__offer {
+  margin-top: 40px;
+  margin-bottom: 35px;
+}
+
 @media (min-width: $tablet-width) {
   .extras {
     padding: 0 30px;
 
     &::before {
-      top: 35px;
+      top: 30px;
       left: 50%;
       transform: translateX(-50%);
     }
@@ -45,13 +55,25 @@
     line-height: 36px;
     border: none;
   }
+
+  .extras__offer {
+    margin-top: 70px;
+    margin-bottom: 76px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .extras {
-    width: 895px;
-    margin: 0;
-    padding: 0;
+    &::before {
+      top: 35px;
+    }
+  }
+
+  .extras__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 85px;
   }
 
   .extras__caption {
@@ -59,5 +81,14 @@
     margin-top: 13px;
     padding-left: 40px;
     padding-right: 35px;
+  }
+
+  .extras__list {
+    width: 895px;
+  }
+
+  .extras__offer {
+    margin: 0;
+    padding: 0;
   }
 }
